@@ -1,24 +1,27 @@
-# Flux-capacitr
+# goodtomes
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: #
 
 ## Minimum Viable Product
-Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
+goodtomes is a clone of goodreads for fantasy-themed fictional books built on
+Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Create blogs
-- [x] Create blog posts
-- [ ] View blogs and posts
-- [ ] Subscribe to blogs
-- [ ] View a feed of subscribed blogs
-- [ ] Tag blog posts
-- [ ] Search for blogs by title
-- [ ] Search for posts by tag
+- [ ] Create accounts (include guest account)
+- [ ] Create sessions (log in)
+- [ ] View users and see their reviews
+- [ ] View books and see reviews
+- [ ] See comments under reviews
+- [ ] Review books
+- [ ] Rate books
+- [ ] Leave comments on reviews
+- [ ] View a user's reviewed books
+- [ ] See a feed of recent reviews
+- [ ] Search for books/users
+- [ ] Explore books
 
 ## Design Docs
 * [View Wireframes][views]
@@ -73,12 +76,11 @@ collections, but they will fetch from the new `search` routes.
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] "Like" button and counter for posts
-- [ ] Custom blog urls
-- [ ] Pagination/infinite scroll
-- [ ] Activity history (e.g. likes, reblogs, taggings)
-- [ ] Post types (image posts, quote posts, etc)
-- [ ] Reblogging
+- [ ] Create new books
+- [ ] Follow users with the option to see only followed users in feed
+- [ ] Add books to "Currently Reading" and "Want to Read" categories
+- [ ] Create themed booklists (arbitrary categories)
+- [ ] Activity history (e.g. reviews, adding books to categories, commenting)
 - [ ] Multiple sessions/session management
 - [ ] User avatars
 - [ ] Typeahead search bar
@@ -88,4 +90,3 @@ collections, but they will fetch from the new `search` routes.
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-
