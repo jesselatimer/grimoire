@@ -13,15 +13,13 @@ Rails and Backbone. Users can:
 - [ ] Create accounts (include guest account)
 - [ ] Create sessions (log in)
 - [ ] View users and see their reviews
-- [ ] View books and see reviews
+- [ ] View tomes and see reviews
 - [ ] See comments under reviews
-- [ ] Review books
-- [ ] Rate books
+- [ ] Review tomes
+- [ ] Rate tomes
 - [ ] Leave comments on reviews
-- [ ] View a user's reviewed books
-- [ ] See a feed of recent reviews
-- [ ] Search for books/users
-- [ ] Explore books
+- [ ] Explore tomes
+- [ ] Explore users
 
 ## Design Docs
 * [View Wireframes][views]
@@ -76,11 +74,13 @@ collections, but they will fetch from the new `search` routes.
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] Create new books
+- [ ] See a feed of recent reviews
+- [ ] Search for tomes/users
+- [ ] Create new tomes
 - [ ] Follow users with the option to see only followed users in feed
-- [ ] Add books to "Currently Reading" and "Want to Read" categories
+- [ ] Add tomes to "Currently Reading" and "Want to Read" categories
 - [ ] Create themed booklists (arbitrary categories)
-- [ ] Activity history (e.g. reviews, adding books to categories, commenting)
+- [ ] Activity history (e.g. reviews, adding tomes to categories, commenting)
 - [ ] Multiple sessions/session management
 - [ ] User avatars
 - [ ] Typeahead search bar
