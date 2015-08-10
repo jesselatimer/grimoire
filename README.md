@@ -12,14 +12,15 @@ Rails and Backbone. Users can:
 
 - [ ] Create accounts (include guest account)
 - [ ] Create sessions (log in)
-- [ ] View users and see their reviews
-- [ ] View tomes and see reviews
-- [ ] See comments under reviews
-- [ ] Review tomes
-- [ ] Rate tomes
-- [ ] Leave comments on reviews
 - [ ] Explore tomes
 - [ ] Explore users
+- [ ] View users and see their reviews
+- [ ] View tomes and see its reviews
+- [ ] Review tomes
+- [ ] Rate tomes
+- [ ] See comments under reviews
+- [ ] Leave comments on reviews
+- [ ] See a feed of recent reviews
 
 ## Design Docs
 * [View Wireframes][views]
@@ -30,59 +31,58 @@ Rails and Backbone. Users can:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Blog Creation (~1 day)
+### Phase 1: User Authentication, User & Tome Indexes (~1 day)
 I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase, users will be able to create blogs using
-a simple text form in a Rails view. The most important part of this phase will
-be pushing the app to Heroku and ensuring that everything works before moving on
-to phase 2.
+App Academy. By the end of this phase, users will be able to create users using
+a simple text form in a Rails view, and explore users and tomes as a grid. I
+will also include basic, temporary seed data. The most important part of this
+phase will be pushing the app to Heroku and ensuring that everything works
+before moving on to phase 2.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Blogs and Posts (~2 days)
-I will add API routes to serve blog and post data as JSON, then add Backbone
+### Phase 2: Viewing Users and Tomes  (~1-2 days)
+I will add API routes to serve user and tome data as JSON, then add Backbone
 models and collections that fetch data from those routes. By the end of this
-phase, users will be able to create blogs and view both blogs and posts, all
-inside a single Backbone app.
+phase, users will be able to view both users and tomes, and create and update
+tomes, all inside a single Backbone app.
 
 [Details][phase-two]
 
-### Phase 3: Editing and Displaying Posts (~2 days)
-I plan to use third-party libraries to add functionality to the `PostForm` and
-`PostShow` views in this phase. First I'll need to add a Markdown editor to the
-`PostForm`, and make sure that the Markdown is properly escaped and formatted in
-the `PostShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to blog posts.
+### Phase 3: Reviews and Comments (~2 days)
+I will add API routes for reviews and comments, and create Backbone models and
+collections. Reviews will be nested as subviews under users and tomes, and
+comments will be nested as subviews under reviews. By the end of this phase,
+users will be able to create and delete reviews and comments, and view reviews
+and comments on user and tome show views.
 
 [Details][phase-three]
 
-### Phase 4: User Feeds (~1-2 days)
-I'll start by adding a `feed` route that uses the `current_user`'s
-`subscribed_blogs` association to serve a list of blog posts ordered
-chronologically. On the Backbone side, I'll make a `FeedShow` view whose `posts`
-collection fetches from the new route.  Ultimately, this will be the page users
-see after logging in.
+### Phase 4: Review and Comment Functionality (~1-2 days)
+Comments will start out collapsed, and can be expanded, which includes the new
+comment form. Users will be able to edit their own reviews and comments in-
+line. Reviews will have a numeric rating, which will update the average rating
+in the database. This phase will take care the gritty details of reviewing and
+commenting.
 
 [Details][phase-four]
 
-### Phase 5: Searching for Blogs and Posts (~2 days)
-I'll need to add `search` routes to both the Blogs and Posts controllers. On the
-Backbone side, there will be a `SearchResults` composite view has `BlogsIndex`
-and `PostsIndex` subviews. These views will use plain old `blogs` and `posts`
-collections, but they will fetch from the new `search` routes.
+### Phase 5: Review Feed (~1 days)
+Users will be able to see a feed of recent reviews, by any user for any tome.
+This will be the eventual landing page of the site. By the end of this phase,
+users will have access to the full functionality of the MVP.
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] See a feed of recent reviews
 - [ ] Search for tomes/users
-- [ ] Create new tomes
 - [ ] Follow users with the option to see only followed users in feed
 - [ ] Add tomes to "Currently Reading" and "Want to Read" categories
-- [ ] Create themed booklists (arbitrary categories)
+- [ ] Create named booklists (arbitrary categories)
 - [ ] Activity history (e.g. reviews, adding tomes to categories, commenting)
 - [ ] Multiple sessions/session management
-- [ ] User avatars
+- [ ] Uploaded instead of hotlinked user avatars (Filepicker)
+- [ ] Markdown in user inputted fields (Markdown-js/Bootstrap Markdown)
 - [ ] Typeahead search bar
 
 [phase-one]: ./docs/phases/phase1.md

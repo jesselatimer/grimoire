@@ -1,22 +1,20 @@
-# Phase 1: User Authentication, Basic Blogs and Posts
+# Phase 1: User Authentication, User & Tome Indexes
 
 ## Rails
 ### Models
 * User
-* Blog
-* Post
+* Tomes
 
 ### Controllers
-* UsersController (create, new)
+* UsersController (create, new, index)
 * SessionsController (create, new, destroy)
-* BlogsController (create, new, show)
-* PostsController (create, new, show)
+* TomesController (index)
 
 ### Views
 * users/new.html.erb
 * session/new.html.erb
-* blogs/new.html.erb
-* blogs/show.html.erb
+* users/index.html.erb
+* tomes/index.html.erb
 
 ## Backbone
 ### Models
@@ -26,3 +24,6 @@
 ### Views
 
 ## Gems/Libraries
+BCrypt
+Factory Girl
+Faker

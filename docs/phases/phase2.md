@@ -1,29 +1,34 @@
-# Phase 2: Viewing Blogs and Posts
+# Phase 2: Viewing Users and Tomes
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
+* *Remove index from UsersController and TomesController*
+* Api::UsersController (index, show)
+* Api::TomesController (index, show, create, update)
 
 ### Views
-* blogs/show.json.jbuilder
+* static_pages/root.html.erb
+* users/index.json.jbuilder
+* users/show.json.jbuilder
+* tomes/index.json.jbuilder
+* tomes/show.json.jbuilder
 
 ## Backbone
 ### Models
-* Blog (parses nested `posts` association)
-* Post
+* User
+* Tome
 
 ### Collections
-* Blogs
-* Posts
+* Users
+* Tomes
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
+* UsersIndex
+* TomesIndex
+* UserShow (composite view, will contain ReviewShows & ReviewForm)
+* TomeShow (composite view, will contain ReviewShows & ReviewForm)
+* TomeForm (create and update)
 
 ## Gems/Libraries

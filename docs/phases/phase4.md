@@ -1,13 +1,13 @@
-# Phase 4: User Feeds
+# Phase 4: Review and Comment Functionality
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::PostsController (feed)
+* API::ReviewsController (update)
+* API::CommentsController (update)
 
 ### Views
-posts/feed.json.jbuilder
 
 ## Backbone
 ### Models
@@ -15,6 +15,5 @@ posts/feed.json.jbuilder
 ### Collections
 
 ### Views
-* FeedShow (composite view, contains PostsIndex subview)
 
 ## Gems/Libraries

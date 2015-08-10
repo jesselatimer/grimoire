@@ -21,7 +21,8 @@ title       | string    | not null
 description | text      | not null
 cover_url   | string    |
 canon       | string    |
-rating      | integer   |
+num_ratings | integer   | default: 0
+avg_rating  | float     |
 
 ## reviews
 column name | data type | details

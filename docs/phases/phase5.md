@@ -1,13 +1,13 @@
-# Phase 5: Searching for Blogs and Posts
+# Phase 5: Review Feed
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (search)
-Api::PostsController (search)
+* Api::ReviewsController (index)
 
 ### Views
+* reviews/feed.json.jbuilder
 
 ## Backbone
 ### Models
@@ -15,8 +15,6 @@ Api::PostsController (search)
 ### Collections
 
 ### Views
-* BlogSearchItem
-* SearchShow (composite view, contains BlogsIndex and PostsIndex subviews)
+* UserFeed
 
 ## Gems/Libraries
-
