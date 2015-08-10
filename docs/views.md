@@ -3,24 +3,28 @@
 ## New Session
 ![new-session]
 
-## Feed Show (landing page)
-![feed-show]
+## Tome Index (landing page)
+![tome-index]
 
-## Blog Show
-![blog-show]
+## User Index
+![user-index]
 
-## Post Show
-![post-show]
+## Tome Show
+![tome-show]
 
-## Post Form
-![post-form]
+## User Show
+![user-show]
 
-## Search Results
-![search-results]
+## Review Show (Collapsed Comments)
+![review-show-collapsed]
+
+## Review Show (Expanded Comments)
+![review-show-expanded]
 
 [new-session]: ./wireframes/new_session.png
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
-[search-results]: ./wireframes/search_results.png
+[tome-index]: ./wireframes/tome_index.png
+[user-index]: ./wireframes/user_index.png
+[tome-show]: ./wireframes/tome_show.png
+[user-show]: ./wireframes/user_show.png
+[review-show-collapsed]: ./wireframes/review_show_collapsed.png
+[review-show-expanded]: ./wireframes/review_show_expanded.png
