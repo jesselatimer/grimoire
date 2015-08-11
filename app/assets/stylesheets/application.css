@@ -14,11 +14,7 @@
  *= require_self
  */
 
- /* http://meyerweb.com/eric/tools/css/reset/
-    v2.0 | 20110126
-    License: none (public domain)
- */
-
+/* Start CSS reset */
  html, body, div, span, applet, object, iframe,
  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
  a, abbr, acronym, address, big, cite, code,
@@ -63,15 +59,34 @@
  	border-collapse: collapse;
  	border-spacing: 0;
  }
+/* End Reset */
+
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  display: block;
+}
 
  .header {
    background-color: #E3DFC9;
+ }
+
+ .header .logo {
  }
 
  .header .login-info {
    float: right;
  }
 
-.user-form-wrapper {}
+.user-form-wrapper {
+  position: absolute;
+  left: 50%;
+  top:  50%;
+  transform: translateX(-50%) translateY(-50%);
+}
 
 .user-form {}
