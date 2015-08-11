@@ -1,13 +1,13 @@
-# Phase 5: Review and Comment Functionality
+# Phase 6: Review Feed
 
 ## Rails
 ### Models
 
 ### Controllers
-* API::ReviewsController (update)
-* API::CommentsController (update)
+* Api::ReviewsController (index)
 
 ### Views
+* reviews/feed.json.jbuilder
 
 ## Backbone
 ### Models
@@ -15,5 +15,6 @@
 ### Collections
 
 ### Views
+* UserFeed
 
 ## Gems/Libraries

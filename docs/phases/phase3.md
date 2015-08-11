@@ -1,37 +1,34 @@
-# Phase 3: Reviews and Comments
+# Phase 3: Shelves and Shelving
 
 ## Rails
 ### Models
-* Reviews
-* Comments
+* Shelves
+* Shelvings
 
 ### Controllers
-* API::ReviewsController (create, destroy)
-* API::CommentsController (create, destroy)
+* API::ShelvesController (create, update, destroy)
+* API::ShelvingsController (create, update, destroy)
 
 ### Views
+* shelves/index.json.jbuilder
+* shelves/show.json.jbuilder
 **Update**
-* tomes/show.json.jbuilder
 * users/show.json.jbuilder
+* tomes/show.json.jbuilder
 
 ## Backbone
 ### Models
-* Review
-* Comment
+* Shelf
 
 ### Collections
-* Reviews
-* Comments
+* Shelves
 
-<!--
-  TA: What is the appropriate naming for CommentItem and ReviewShow?
-  ReviewShow will only be seen on UserShow or TomeShow, so it's not
-  really a show, but I also want to get across that it's a composite view.
--->
 ### Views
-* CommentItem
-* CommentForm
-* ReviewShow (composite view, contains CommentItems & CommentForm)
-* ReviewForm
+* ShelvesIndex
+* ShelfShow
+* ShelfForm
+**Update**
+* TomeShow
+* UserShow
 
 ## Gems/Libraries

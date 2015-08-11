@@ -21,8 +21,6 @@ title       | string    | not null
 description | text      | not null
 cover_url   | string    |
 canon       | string    |
-num_ratings | integer   | default: 0
-avg_rating  | float     |
 
 ## reviews
 column name | data type | details
@@ -41,3 +39,17 @@ id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users)
 review_id   | integer   | not null, foreign key (references reviews)
 body        | text      | not null
+
+## shelves
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null, foreign key (references users)
+title       | string    | not null
+
+## shelvings
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+shelf_id    | integer   | not null, foreign key (references shelves)
+tome_id     | integer   | not null, foreign key (references tomes)

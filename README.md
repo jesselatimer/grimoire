@@ -16,6 +16,7 @@ Rails and Backbone. Users can:
 - [ ] Explore users
 - [ ] View users and see their reviews
 - [ ] View tomes and see its reviews
+- [ ] Add tomes to shelves
 - [ ] Review tomes
 - [ ] Rate tomes
 - [ ] See comments under reviews
@@ -49,36 +50,41 @@ tomes, all inside a single Backbone app.
 
 [Details][phase-two]
 
-### Phase 3: Reviews and Comments (~2 days)
+### Phase 3: Shelves and Shelving (~1 day)
+I will add the ability to create and populate shelves, such as "Want to Read"
+and "Currently Reading". By the end of this phase, users will be able to create,
+edit, and delete shelves.
+
+[Details][phase-three]
+
+### Phase 4: Reviews and Comments (~2 days)
 I will add API routes for reviews and comments, and create Backbone models and
 collections. Reviews will be nested as subviews under users and tomes, and
 comments will be nested as subviews under reviews. By the end of this phase,
 users will be able to create and delete reviews and comments, and view reviews
 and comments on user and tome show views.
 
-[Details][phase-three]
+[Details][phase-four]
 
-### Phase 4: Review and Comment Functionality (~1-2 days)
+### Phase 5: Review and Comment Functionality (~1-2 days)
 Comments will start out collapsed, and can be expanded, which includes the new
 comment form. Users will be able to edit their own reviews and comments in-
 line. Reviews will have a numeric rating, which will update the average rating
 in the database. This phase will take care the gritty details of reviewing and
 commenting.
 
-[Details][phase-four]
+[Details][phase-five]
 
-### Phase 5: Review Feed (~1 days)
+### Phase 6: Review Feed (~1 days)
 Users will be able to see a feed of recent reviews, by any user for any tome.
 This will be the eventual landing page of the site. By the end of this phase,
 users will have access to the full functionality of the MVP.
 
-[Details][phase-five]
+[Details][phase-six]
 
 ### Bonus Features (TBD)
 - [ ] Search for tomes/users
 - [ ] Follow users with the option to see only followed users in feed
-- [ ] Add tomes to "Currently Reading" and "Want to Read" categories
-- [ ] Create named booklists (arbitrary categories)
 - [ ] Activity history (e.g. reviews, adding tomes to categories, commenting)
 - [ ] Multiple sessions/session management
 - [ ] Uploaded instead of hotlinked user avatars (Filepicker)
@@ -90,3 +96,4 @@ users will have access to the full functionality of the MVP.
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
+[phase-six]: ./docs/phases/phase6.md
