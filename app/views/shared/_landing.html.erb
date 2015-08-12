@@ -1,0 +1,27 @@
+<div class="login-wrapper">
+  <a href="/">
+    <img src="https://github.com/jesselatimer/goodtomes/blob/master/app/assets/images/goodtomes-logo.png?raw=true" class="logo" />
+  </a>
+
+  <% if !current_user %>
+    <%= render partial: "shared/form", locals: { url: url, submit_value: submit_value } %>
+    <div class="log-state">
+      <% if session %>
+        <%= link_to "Sign In", new_session_url, class: "btn selected" %>
+        <%= link_to "Sign Up", new_user_url, class: "btn inactive" %>
+      <% else %>
+        <%= link_to "Sign In", new_session_url, class: "btn inactive" %>
+        <%= link_to "Sign Up", new_user_url, class: "btn selected" %>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="user-form-wrapper">
+      <p>
+        You're logged in as: <%= link_to current_user.username, "#", class: :btn %>
+      </p>
+    </div>
+    <div class="log-state">
+      <%= link_to "Sign Out", session_url, method: :delete, class: "btn inactive" %>
+    </div>
+  <% end %>
+</div>

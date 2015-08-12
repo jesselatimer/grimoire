@@ -1,9 +1,6 @@
   <div class="user-form-wrapper">
     <form class="user-form" action="<%= url %>" method="post">
       <%= auth_token %>
-      <% if edit %>
-        <input type="hidden" name="_method" value="patch">
-      <% end %>
 
       <input type="text" class="form-control" name="user[username]" placeholder="WizardName" value="<%= @user && @user.username %>">
 
