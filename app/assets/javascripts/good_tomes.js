@@ -9,7 +9,7 @@ window.GoodTomes = {
     var users = new GoodTomes.Collections.Users();
 
     var router = new GoodTomes.Routers.Router({
-      $rootEl: $('content'),
+      $rootEl: $('.content'),
       tomes: tomes,
       users: users
     });

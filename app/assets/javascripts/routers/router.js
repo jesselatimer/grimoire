@@ -1,15 +1,24 @@
 GoodTomes.Routers.Router = Backbone.Router.extend ({
   routes: {
-    "" : "TomesIndex"
+    "" : "tomesIndex",
+    "users" : "usersIndex"
   },
 
-  initialize: function (option) {
+  initialize: function (options) {
+    this.$rootEl = options.$rootEl;
     this.users = options.users;
     this.tomes = options.tomes;
+    this.users.fetch();
+    this.tomes.fetch();
   },
 
-  TomesIndex: function () {
+  tomesIndex: function () {
     var view = new GoodTomes.Views.TomesIndex({ collection: this.tomes });
+    this._swapView(view);
+  },
+
+  usersIndex: function () {
+    var view = new GoodTomes.Views.UsersIndex({ collection: this.users });
     this._swapView(view);
   },
 
