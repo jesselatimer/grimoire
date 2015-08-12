@@ -9,18 +9,18 @@
 </head>
 <body>
   <!-- Move to static_pages to clean up login/sign-in page -->
-  <div class="header">
+  <!-- <div class="header">
     <img src="https://github.com/jesselatimer/goodtomes/blob/master/app/assets/images/goodtomes-logo.png?raw=true" class="logo" />
     <div class="login-info">
       <% if current_user %>
         <%= current_user.username %>
         <%= button_to "Sign Out", session_url, method: :delete %>
       <% else %>
-        <%= link_to "Sign In", new_session_url %> |
+        <%= link_to "Sign In", new_session_url %>
         <%= link_to "Sign Up", new_user_url %>
       <% end %>
     </div>
-  </div>
+  </div> -->
 
   <div class="errors">
     <% if flash["errors"] %>
