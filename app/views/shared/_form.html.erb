@@ -1,29 +1,19 @@
-<div class="user-form-wrapper">
-  <form class="user-form" action="<%= url %>" method="post">
-    <%= auth_token %>
-    <% if edit %>
-      <input type="hidden" name="_method" value="patch">
-    <% end %>
+<div class="login-wrapper">
+  <div class="user-form-wrapper">
+    <form class="user-form" action="<%= url %>" method="post">
+      <%= auth_token %>
+      <% if edit %>
+        <input type="hidden" name="_method" value="patch">
+      <% end %>
 
-    <label>WizardName
-      <input type="text" name="user[username]" value="<%= @user && @user.username %>">
-    </label>
+      <label>WizardName
+        <input type="text" name="user[username]" placeholder="WizardName" value="<%= @user && @user.username %>">
+      </label>
 
-    <label>Password
-      <input type="password" name="user[password]" value="">
-    </label>
+      <label>Password
+        <input type="password" name="user[password]" placeholder="Password">
+      </label>
 
-    <input type="submit" value="<%= submit_value %>">
-  </form>
-
-  <div class="login-info">
-    <% if current_user %>
-      <%= current_user.username %>
-      <%= button_to "Sign Out", session_url, method: :delete %>
-    <% else %>
-      <%= link_to "Sign In", new_session_url %> |
-      <%= link_to "Sign Up", new_user_url %>
-    <% end %>
+      <input type="submit" value="<%= submit_value %>" class="btn btn-primary">
+    </form>
   </div>
-
-</div>

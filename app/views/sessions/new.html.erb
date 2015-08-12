@@ -1,1 +1,12 @@
 <%= render partial: "shared/form", locals: { url: "/session", submit_value: "Sign In!", edit: false } %>
+
+<div class="log-state">
+  <% if current_user %>
+    <%= current_user.username %>
+    <%= button_to "Sign Out", session_url, method: :delete, class: :btn %>
+  <% else %>
+    <%= link_to "Sign In", new_session_url, class: "btn selected" %>
+    <%= link_to "Sign Up", new_user_url, class: "btn inactive" %>
+  <% end %>
+</div>
+</div>

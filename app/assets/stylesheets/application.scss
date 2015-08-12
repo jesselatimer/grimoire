@@ -1,0 +1,131 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Start CSS reset */
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	font-size: 100%;
+ 	font: inherit;
+ 	vertical-align: baseline;
+  box-sizing: border-box;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section {
+ 	display: block;
+ }
+ body {
+ 	line-height: 1;
+ }
+ ol, ul {
+ 	list-style: none;
+ }
+ blockquote, q {
+ 	quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+ 	content: '';
+ 	content: none;
+ }
+ table {
+ 	border-collapse: collapse;
+ 	border-spacing: 0;
+ }
+/* End Reset */
+
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #181818;
+  font-family: 'Lora', serif;
+}
+
+body {
+  background:
+    url('/assets/alejandroescamilla-book.png') no-repeat bottom center fixed,
+    #b5b09c;
+  background-size: contain, 100% 50%;
+}
+
+input, label {
+  display: block;
+}
+
+ .header {
+   background-color: #E3DFC9;
+ }
+
+ .header .logo {}
+
+ .header .login-info {
+   float: right;
+ }
+
+.login-wrapper {
+  position: absolute;
+  left: 50%;
+  top:  30%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.user-form-wrapper {
+  padding: 20px;
+  border: 2px #E3DFC9 solid;
+  background-color: #F0F0E4;
+}
+
+.user-form {}
+
+.log-state .btn {
+  width: 49%;
+  box-sizing: border-box;
+  border-radius: 0px;
+  border: 2px #E3DFC9 solid;
+  border-top: 0;
+  background-color: #F0F0E4;
+  margin-top: -2px;
+}
+
+.log-state :first-child {
+  float: left;
+}
+
+.log-state :last-child {
+  float: right;
+}
+
+.log-state .selected {
+}
+
+.log-state .active:hover {
+  background-color: #286090;
+}
+
+.log-state .inactive {
+  opacity: .8;
+  transition: ease .2s;
+  border-top: 2px #E3DFC9 solid;
+  padding-top: 4px;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.log-state .inactive:hover {
+  opacity: 1;
+}
