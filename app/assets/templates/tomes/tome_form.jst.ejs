@@ -1,0 +1,7 @@
+<form class="tome-form">
+  <input type="text" name="tome[title]" value="<%= tome.escape("title") %>" placeholder="Title">
+  <input type="text" name="tome[canon]" value="<%= tome.escape("canon") %>" placeholder="Source Canon">
+  <textarea name="tome[description]" placeholder="Tome description"><%= tome.escape("description") %></textarea>
+  <input type="text" name="tome[cover_url]" value="<%= tome.escape("cover_url") %>" placeholder="Cover Image URL">
+  <input type="submit" value="Submit" class="submit">
+</form>

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require serialize_json
 //= require bootstrap-sprockets
 //= require underscore
 //= require backbone

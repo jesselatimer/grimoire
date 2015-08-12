@@ -14,7 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'annotate'
 gem 'newrelic_rpm'
-
+gem 'serialize_json-rails', '~> 0.0.1'
 gem 'backbone-on-rails'
 
 gem 'factory_girl_rails'
