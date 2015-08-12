@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
   validate :ensure_image_url, :ensure_bio
   attr_reader :password
 
+  has_many :authored_tomes, class_name: :Tome, foreign_key: :author_id
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil

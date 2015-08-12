@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 gem 'rails', '4.2.3'
 gem 'pg'
@@ -13,6 +14,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'annotate'
 gem 'newrelic_rpm'
+
+gem 'backbone-on-rails'
 
 gem 'factory_girl_rails'
 gem 'faker'

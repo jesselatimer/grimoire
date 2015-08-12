@@ -1,27 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CapstoneProjectProposal</title>
+  <title>goodtomes</title>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- Move to static_pages to clean up login/sign-in page -->
-  <!-- <div class="header">
-    <img src="https://github.com/jesselatimer/goodtomes/blob/master/app/assets/images/goodtomes-logo.png?raw=true" class="logo" />
-    <div class="login-info">
-      <% if current_user %>
-        <%= current_user.username %>
-        <%= button_to "Sign Out", session_url, method: :delete %>
-      <% else %>
-        <%= link_to "Sign In", new_session_url %>
-        <%= link_to "Sign Up", new_user_url %>
-      <% end %>
-    </div>
-  </div> -->
-
   <div class="errors">
     <% if flash["errors"] %>
       <ul>
