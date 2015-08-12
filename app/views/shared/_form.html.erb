@@ -6,14 +6,10 @@
         <input type="hidden" name="_method" value="patch">
       <% end %>
 
-      <label>WizardName
-        <input type="text" name="user[username]" placeholder="WizardName" value="<%= @user && @user.username %>">
-      </label>
+      <input type="text" class="form-control" name="user[username]" placeholder="WizardName" value="<%= @user && @user.username %>">
 
-      <label>Password
-        <input type="password" name="user[password]" placeholder="Password">
-      </label>
+      <input type="password" class="form-control" name="user[password]" placeholder="Password">
 
-      <input type="submit" value="<%= submit_value %>" class="btn btn-primary">
+      <input type="submit" value="<%= submit_value %>" class="btn btn-primary full-width">
     </form>
   </div>
