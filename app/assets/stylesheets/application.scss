@@ -59,13 +59,25 @@ body {
     url('/assets/alejandroescamilla-book.png') no-repeat bottom center fixed,
     #b5b09c;
   background-size: contain, 100% 50%;
+  padding-top: 70px;
+  padding-bottom: 300px;
 }
 
 input { display: block; }
 .full-width { width: 100%; }
 
-header { background-color: #E3DFC9; }
-header .login-info { float: right; }
+header {
+  .navbar-default {
+    background-color: #E3DFC9;
+    border-bottom: 2px solid #e5e5d6;
+  }
+  .navbar-brand { padding: 0 10px 5px; }
+  .logo {
+    height: 100%;
+    vertical-align: middle;
+  }
+  .login-info { float: right; }
+}
 
 .login-wrapper {
   position: absolute;
@@ -79,6 +91,7 @@ header .login-info { float: right; }
 
 .login-wrapper img {
   width: 100%;
+  margin-bottom: -6%;
 }
 
 .user-form-wrapper {
@@ -121,7 +134,7 @@ header .login-info { float: right; }
 
   .index-item {
     border: 2px #E3DFC9 solid;
-    background-color: #F0F0E4;
+    background-color: #333;
 
     a {
       text-decoration: none;
@@ -155,7 +168,6 @@ header .login-info { float: right; }
       height: 300px;
       position: relative;
       width: 100%;
-      border-bottom: 1px black solid;
       img {
         min-height: 100%;
         width: 100%;

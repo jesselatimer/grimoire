@@ -3,7 +3,6 @@ GoodTomes.Views.UsersIndex = Backbone.CompositeView.extend ({
 
   initialize: function () {
     this.collection.fetch();
-    debugger
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addUserView);
     this.listenTo(this.collection, "remove", this.removeUserView);
