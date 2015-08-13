@@ -21,6 +21,6 @@ GoodTomes.Views.TomesIndex = Backbone.CompositeView.extend ({
   },
 
   removeTomeView: function (tome) {
-    this.removeModelSubview('.tome-items', tome);
+    this.removeModelSubview('.tome-items .row', tome);
   }
 });

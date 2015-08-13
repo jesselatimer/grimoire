@@ -19,10 +19,14 @@ class Tome < ActiveRecord::Base
   belongs_to :author, class_name: :User, foreign_key: :author_id
 
   def ensure_cover_url
-    self.cover_url ||= "http://www.clipartpal.com/_thumbs/pd/education/large_open_book.png"
+    if self.cover_url == "" || nil
+      self.cover_url = "http://www.clipartpal.com/_thumbs/pd/education/large_open_book.png"
+    end
   end
 
   def ensure_description
-    self.description ||= "i'm a tome"
+    if self.description == "" || nil
+      self.description ||= "i'm a tome"
+    end
   end
 end

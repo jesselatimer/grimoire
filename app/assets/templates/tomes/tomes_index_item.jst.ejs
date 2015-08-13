@@ -1,1 +1,8 @@
-<a href="#/tomes/<%= tome.id %>"><%= tome.escape("title") %></a>
+<div class="tome-index-item index-item">
+  <div class="index-item-image">
+    <a href="#/tomes/<%= tome.id %>">
+      <img src="<%= tome.escape("cover_url") %>" />
+    </a>
+  </div>
+  <a href="#/tomes/<%= tome.id %>"><%= tome.escape("title") %></a>
+</div>
