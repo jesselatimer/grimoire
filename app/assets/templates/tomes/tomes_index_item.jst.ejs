@@ -1,10 +1,11 @@
 <div class="tome-index-item index-item">
-  <div class="index-item-image">
-    <a href="#/tomes/<%= tome.id %>">
+  <a href="#/tomes/<%= tome.id %>">
+    <div class="index-item-image">
       <img src="<%= tome.escape("cover_url") %>" />
-    </a>
-  </div>
-  <div class="index-item-content">
-    <a href="#/tomes/<%= tome.id %>"><%= tome.escape("title") %></a>
-  </div>
+    </div>
+    <div class="index-item-content">
+      <%= tome.escape("title") %><br>
+      <span class="author">Mysterious Wizard</span>
+    </div>
+  </a>
 </div>

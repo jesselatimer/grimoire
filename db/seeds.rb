@@ -24,5 +24,11 @@ Tome.create([
     canon: "Lord of the Rings",
     description: 'Set in a time "Between the Dawn of Færie and the Dominion of Men",[1] The Hobbit follows the quest of home-loving hobbit Bilbo Baggins to win a share of the treasure guarded by the dragon, Smaug. Bilbo\'s journey takes him from light-hearted, rural surroundings into more sinister territory.[2] The story is told in the form of an episodic quest, and most chapters introduce a specific creature, or type of creature, of Tolkien\'s Wilderland. By accepting the disreputable, romantic, fey and adventurous sides of his nature and applying his wits and common sense, Bilbo gains a new level of maturity, competence and wisdom.[3] The story reaches its climax in the Battle of the Five Armies, where many of the characters and creatures from earlier chapters re-emerge to engage in conflict.',
     cover_url: "http://www.collecttolkien.com/images/Books/Book%20Journal%20LOTR%20There%20Back%20Again.jpg"
+  },
+  {
+    title: "The Necronomicon",
+    canon: "Lovecraft",
+    description: 'The Necronomicon is a fictional grimoire (textbook of magic) appearing in the stories by horror writer H. P. Lovecraft and his followers. It was first mentioned in Lovecraft\'s 1924 short story "The Hound",[1] written in 1922, though its purported author, the "Mad Arab" Abdul Alhazred, had been quoted a year earlier in Lovecraft\'s "The Nameless City".[2] Among other things, the work contains an account of the Old Ones, their history, and the means for summoning them.',
+    cover_url: "http://orig04.deviantart.net/fc4c/f/2013/348/e/8/e8f395694618a4221c6823e02a408b29-d6xx05l.jpg"
   }
   ])
