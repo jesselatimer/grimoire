@@ -1,12 +1,12 @@
 GoodTomes.Routers.Router = Backbone.Router.extend ({
   routes: {
     ""               : "tomesIndex",
-    "tomes"          : "tomesIndex",
     "tomes/new"      : "tomeForm",
-    "tomes/:id"      : "tomeShow",
+    "tomes"          : "tomesIndex",
     "tomes/:id/edit" : "tomeForm",
-    "users"          : "usersIndex",
-    "users/:id"      : "userShow"
+    "tomes/:id"      : "tomeShow",
+    "users/:id"      : "userShow",
+    "users"          : "usersIndex"
   },
 
   initialize: function (options) {
@@ -29,8 +29,12 @@ GoodTomes.Routers.Router = Backbone.Router.extend ({
   },
 
   tomeForm: function (id) {
-    var tome = this.tomes.getOrFetch(id);
-    if (!tome) { tome = new GoodTomes.Models.Tome(); }
+    var tome;
+    if (id) {
+      tome = this.tomes.getOrFetch(id);
+    } else {
+      tome = new GoodTomes.Models.Tome();
+    }
     var view = new GoodTomes.Views.TomeForm({ model: tome, collection: this.tomes });
     this._swapView(view);
   },

@@ -113,7 +113,10 @@ header .login-info { float: right; }
 }
 .log-state .inactive:hover { opacity: 1; }
 
-.index-item-wrapper { margin-bottom: 20px; }
+.index-item-wrapper {
+  margin-bottom: 20px;
+  min-width: 240px;
+}
 
 .index-item {
   box-sizing: border-box;
