@@ -1,12 +1,12 @@
 GoodTomes.Routers.Router = Backbone.Router.extend ({
   routes: {
     ""               : "tomesIndex",
-    "tomes/new"      : "tomeForm",
     "tomes"          : "tomesIndex",
-    "tomes/:id/edit" : "tomeForm",
+    "tomes/new"      : "tomeForm",
     "tomes/:id"      : "tomeShow",
-    "users/:id"      : "userShow",
-    "users"          : "usersIndex"
+    "tomes/:id/edit" : "tomeForm",
+    "users"          : "usersIndex",
+    "users/:id"      : "userShow"
   },
 
   initialize: function (options) {

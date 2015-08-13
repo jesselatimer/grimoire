@@ -5,6 +5,7 @@ class CreateTomes < ActiveRecord::Migration
       t.text :description
       t.string :cover_url
       t.string :canon
+      t.string :author_name
       t.integer :author_id, index: true
 
       t.timestamps null: false

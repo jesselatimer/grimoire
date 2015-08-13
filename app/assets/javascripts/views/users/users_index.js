@@ -2,6 +2,8 @@ GoodTomes.Views.UsersIndex = Backbone.CompositeView.extend ({
   template: JST["users/users_index"],
 
   initialize: function () {
+    this.collection.fetch();
+    debugger
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addUserView);
     this.listenTo(this.collection, "remove", this.removeUserView);
@@ -21,6 +23,6 @@ GoodTomes.Views.UsersIndex = Backbone.CompositeView.extend ({
   },
 
   removeUserView: function (user) {
-    this.removeModelSubview('.user-items', user);
+    this.removeModelSubview('.user-items .row', user);
   }
 });

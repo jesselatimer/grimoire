@@ -1,2 +1,2 @@
-json.(user, :id, :username, :bio, :canon, :image_url, :email)
+json.(user, :id, :username, :bio, :canon, :image_url, :name)
 json.authored_tomes user.authored_tomes unless user.authored_tomes.empty?
