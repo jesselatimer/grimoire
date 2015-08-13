@@ -4,5 +4,7 @@
       <img src="<%= tome.escape("cover_url") %>" />
     </a>
   </div>
-  <a href="#/tomes/<%= tome.id %>"><%= tome.escape("title") %></a>
+  <div class="index-item-content">
+    <a href="#/tomes/<%= tome.id %>"><%= tome.escape("title") %></a>
+  </div>
 </div>
