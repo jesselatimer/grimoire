@@ -13,7 +13,7 @@ Rails and Backbone. Users can:
 - [ ] Create accounts (include guest account)
 - [x] Create sessions (log in)
 - [x] Explore tomes
-- [ ] Explore users
+- [x] Explore users
 - [ ] View users and see their reviews
 - [ ] View tomes and see its reviews
 - [ ] Add tomes to shelves
