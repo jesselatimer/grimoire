@@ -43,6 +43,10 @@ Tome.create([
 User.create([
   {
     password: "password",
+    username: "shrouded_in_mystery"
+  },
+  {
+    password: "password",
     username: "boywholived",
     name: "Harry Potter",
     canon: "Harry Potter by J.K. Rowling",

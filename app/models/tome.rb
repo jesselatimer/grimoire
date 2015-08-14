@@ -20,7 +20,7 @@ class Tome < ActiveRecord::Base
 
   def ensure_cover_url
     if self.cover_url == "" || nil
-      self.cover_url = "http://www.clipartpal.com/_thumbs/pd/education/large_open_book.png"
+      self.cover_url = "http://orig06.deviantart.net/9ceb/f/2011/050/0/5/grimoire_cover_by_hinatauzo9-d39xker.png"
     end
   end
 

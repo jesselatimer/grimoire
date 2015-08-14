@@ -1,2 +1,4 @@
-<%= user.escape("username") %>
-<%= user.escape("bio") %>
+<img src="<%= user.escape("image_url") %>" />
+<p>Wizardname: <%= user.escape("username") %></p>
+<p>Truename: <%= user.escape("name") || "unknown" %></p>
+<p>Bio: <%= user.escape("bio") || "unknown" %></p>

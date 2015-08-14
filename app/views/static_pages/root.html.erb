@@ -4,7 +4,7 @@
 <script>
   <% if current_user %>
     var CURRENT_USER = {
-      id: <%= current_user.id %>,
+      id: "<%= current_user.id %>",
       username: "<%= current_user.username %>",
       name: "<%= current_user.name %>",
       bio: "<%= current_user.bio %>",

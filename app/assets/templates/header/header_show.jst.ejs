@@ -1,12 +1,3 @@
-<div class="login-info">
-  <%= CURRENT_USER.username %>
-  <form class="" action="/session" method="post">
-    <input type="hidden" name="authenticity_token" value="<%= auth_token %>">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Sign Out">
-  </form>
-</div>
-
 <nav class="navbar navbar-fixed-top navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -25,39 +16,25 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#/tomes">Tomes</a></li>
-        <li><a href="#/tomes/new">Add Tome</a></li>
-        <li><a href="#/users">Users</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#/tomes">Grimoires</a></li>
+            <li><a href="#/users">Wizards</a></li>
           </ul>
         </li>
+        <li><a href="#/tomes/new">Add Grimoire</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= CURRENT_USER.username %> <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li>
-              <form class="" action="/session" method="post">
-                <input type="hidden" name="authenticity_token" value="<%= auth_token %>">
-                <input type="hidden" name="_method" value="delete">
-                <input type="submit" value="Sign Out" class="btn">
-              </form>
-            </li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+        <li><a href="#">Feed</a></li>
+        <li><a href="#/users/<%= CURRENT_USER.id %>"><%= CURRENT_USER.username %></a></li>
+        <li>
+          <form class="" action="/session" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= auth_token %>">
+            <input type="hidden" name="_method" value="delete">
+            <input src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Power_-_Logoff.png" type="image" alt="Submit" class="sign-out">
+            <span class="on-hover">Sign Out</span>
+          </form>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
