@@ -246,7 +246,7 @@ header {
   .index-item:hover .index-item-content { opacity: 1; }
 }
 
-.user-show-wrapper {
+.user-show-wrapper, .tome-show-wrapper {
   width: 90%;
   margin: auto;
   padding: 15px;
@@ -261,7 +261,7 @@ header {
   }
 }
 
-.user-show-wrapper:after {
+.user-show-wrapper:after, .tome-show-wrapper:after {
     display: block;
     content: " ";
     clear: both;

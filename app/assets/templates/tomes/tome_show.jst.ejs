@@ -1,2 +1,3 @@
-<%= tome.escape("title") %>
-<%= tome.escape("description") %>
+<img src="<%= tome.escape("cover_url") %>" />
+<p>Title: <%= tome.escape("title") %></p>
+<p>Bio: <%= tome.escape("description") || "unknown" %></p>

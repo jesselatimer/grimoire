@@ -43,10 +43,6 @@ Tome.create([
 User.create([
   {
     password: "password",
-    username: "shrouded_in_mystery"
-  },
-  {
-    password: "password",
     username: "boywholived",
     name: "Harry Potter",
     canon: "Harry Potter by J.K. Rowling",
@@ -55,7 +51,7 @@ User.create([
   },
   {
     password: "password",
-    username: "TheWorshipperoftheGreatDevourer",
+    username: "TheWorshipper",
     name: "Abdul Alhazred",
     canon: "The Cthulhu Mythos by H.P. Lovecraft",
     bio: 'A mad poet of Sanaá, in Yemen, who is said to have flourished during the period of the Ommiade caliphs, circa 700 A.D. He visited the ruins of Babylon and the subterranean secret of Memphis and spent ten years alone in the great southern desert of Arabia—the Roba El Khaliyeh or "Empty Space" of the ancients—and "Dahna" or "Crimson" desert of the modern Arabs, which is held to be inhabited by protective evil spirits and monsters of death. Of this desert many strange and unbelievable marvels are told by those who pretend to have penetrated it. In his last years Alhazred dwelt in Damascus.',
@@ -68,5 +64,17 @@ User.create([
     canon: "Adventure Time by Pendleton Ward",
     bio: '"What do you think, Finn? Can we pull back the veil of static and reach in to the source of all being? Behind this curtain of patterns, this random pattern generator. So clever. Right here in every home, watching us from a one-sided mirror."',
     image_url: "http://orig05.deviantart.net/c3f6/f/2012/187/9/1/ice_king_by_devastis-d56704p.png"
+  },
+  {
+    password: "password",
+    username: "natureguy",
+    name: "Radagast the Brown",
+    canon: "Middle-earth by J.R.R. Tolkien",
+    bio: 'Radagast the Brown is a fictional character in J. R. R. Tolkien\'s Middle-earth legendarium. He is one of the Istari, also known as "Wizards", who were sent by the angelic Valar to aid the Elves and Men of Middle-earth in their struggle against the Dark Lord Sauron. Radagast appears in The Lord of the Rings and Unfinished Tales, and is mentioned in The Hobbit and The Silmarillion.',
+    image_url: "http://pre11.deviantart.net/abd8/th/pre/i/2013/004/7/f/radagast_the_brown_by_angelabermudez-d5qes4o.jpg"
+  },
+  {
+    password: "password",
+    username: "shrouded_in_mystery"
   }
 ])
