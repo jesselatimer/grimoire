@@ -5,7 +5,6 @@ GoodTomes.Views.ShelfTomeItem = Backbone.View.extend ({
   render: function () {
     var renderedContent = this.template({ tome: this.model });
     this.$el.html(renderedContent);
-    debugger
     return this;
   }
 });
