@@ -3,13 +3,7 @@
 
 <script>
   <% if current_user %>
-    var CURRENT_USER = {
-      id: "<%= current_user.id %>",
-      username: "<%= current_user.username %>",
-      name: "<%= current_user.name %>",
-      bio: "<%= current_user.bio %>",
-      canon: "<%= current_user.canon %>",
-      image_url: "<%= current_user.image_url %>"
-    }
+    var CURRENT_USER = new GoodTomes.Models.User({ id: <%= current_user.id %>});
+    CURRENT_USER.fetch();
   <% end %>
 </script>

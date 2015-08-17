@@ -7,6 +7,7 @@
 #  description :text
 #  cover_url   :string
 #  canon       :string
+#  author_name :string
 #  author_id   :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -17,6 +18,9 @@ class Tome < ActiveRecord::Base
   validate :ensure_cover_url, :ensure_description
 
   belongs_to :author, class_name: :User, foreign_key: :author_id
+  has_many :shelvings
+  has_many :shelves, through: :shelvings
+  has_many :users, through: :shelves
 
   def ensure_cover_url
     if self.cover_url == "" || nil

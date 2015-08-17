@@ -5,7 +5,11 @@
     </div>
     <div class="index-item-content">
       <%= tome.escape("title") %><br>
-      <span class="author">Mysterious Wizard</span>
+      <% if (!tome.author().isEmpty()) { %>
+        <span class="author"><%= tome.author().escape("username") %></span>
+      <% } else { %>
+        <span class="author"><%= tome.escape("author_name") || "unknown author" %></span>
+      <% } %>
     </div>
   </a>
 </div>

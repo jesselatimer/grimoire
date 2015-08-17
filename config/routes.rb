@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:index, :show]
     resources :tomes, only: [:index, :show, :create, :update]
+    resources :shelves, only: [:show, :create, :update, :destroy]
+    resources :shelvings, only: [:create, :destroy]
   end
 end

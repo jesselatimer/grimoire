@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
+gem 'font-awesome-sass'
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'bootstrap-sass'

@@ -4,7 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  username        :string           not null
-#  email           :string
+#  name            :string
 #  image_url       :string
 #  canon           :string
 #  bio             :text
@@ -23,6 +23,8 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many :authored_tomes, class_name: :Tome, foreign_key: :author_id
+  has_many :shelves, class_name: :Shelf
+  has_many :shelvings, through: :shelves
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

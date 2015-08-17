@@ -27,11 +27,14 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Feed</a></li>
-        <li><a href="#/users/<%= CURRENT_USER.id %>"><%= CURRENT_USER.username %></a></li>
+        <li><a href="#/users/<%= CURRENT_USER.id %>"><%= CURRENT_USER.escape("username") %></a></li>
         <li>
           <form class="" action="/session" method="post">
             <input type="hidden" name="authenticity_token" value="<%= auth_token %>">
             <input type="hidden" name="_method" value="delete">
+            <!-- <button type="button" class="btn">
+              <i class="fa fa-sign-out"></i>
+            </button> -->
             <input src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Power_-_Logoff.png" type="image" alt="Submit" class="sign-out">
             <span class="on-hover">Sign Out</span>
           </form>

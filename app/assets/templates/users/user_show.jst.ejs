@@ -1,5 +1,15 @@
-<img src="<%= user.escape("image_url") %>" />
-<p>Wizardname: <%= user.escape("username") %></p>
-<p>Truename: <%= user.escape("name") || "unknown" %></p>
-<p>Bio: <%= user.escape("bio") || "unknown" %></p>
-<a href="#/users">X</a>
+<% if (CURRENT_USER.id === user.id) { %>
+  <h1>Your Profile</h1>
+<% } %>
+<div class="col-sm-4 col-xs-12">
+  <img src="<%= user.escape("image_url") %>" />
+</div>
+<div class="content col-sm-8 col-xs-12">
+  <h3 class="username"><%= user.escape("username") %></h3>
+  <h4 class="truename"><%= user.escape("name") || "" %></h4>
+  <p class="bio"><%= user.escape("bio") %></p>
+</div>
+
+<div class="shelves"></div>
+
+<a class="exit-button"><i class="fa fa-times-circle"></i></a>
