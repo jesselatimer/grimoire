@@ -1,0 +1,15 @@
+<div class="shelf-item">
+  <a href="#/tomes/<%= tome.id %>">
+    <div class="shelf-item-image">
+      <img src="<%= tome.escape("cover_url") %>" />
+    </div>
+    <div class="shelf-item-content">
+      <%= tome.escape("title") %><br>
+      <% if (!tome.author().isEmpty()) { %>
+        <span class="author"><%= tome.author().escape("username") %></span>
+      <% } else { %>
+        <span class="author"><%= tome.escape("author_name") || "unknown author" %></span>
+      <% } %>
+    </div>
+  </a>
+</div>

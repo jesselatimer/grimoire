@@ -4,6 +4,8 @@
 
 [heroku]: #
 
+<!-- shelf image /assets/shelf.png -->
+
 ## Minimum Viable Product
 goodtomes is a clone of goodreads for fantasy-themed fictional books built on
 Rails and Backbone. Users can:

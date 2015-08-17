@@ -1,6 +1,5 @@
 GoodTomes.Views.UserShow = Backbone.CompositeView.extend ({
   template: JST["users/user_show"],
-  className: "user-show-wrapper",
 
   events: {
     "click .exit-button" : "back"
@@ -29,7 +28,7 @@ GoodTomes.Views.UserShow = Backbone.CompositeView.extend ({
   },
 
   addShelfView: function (shelf) {
-    var subview = new GoodTomes.Views.ShelvesIndex({ model: shelf });
+    var subview = new GoodTomes.Views.ShelfShow({ model: shelf, collection: shelf.tomes() });
     this.addSubview('.shelves', subview);
   },
 

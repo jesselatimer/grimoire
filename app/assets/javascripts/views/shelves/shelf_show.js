@@ -1,5 +1,6 @@
-GoodTomes.Views.ShelvesIndex = Backbone.CompositeView.extend ({
-  template: JST["shelves/shelves_index"],
+GoodTomes.Views.ShelfShow = Backbone.CompositeView.extend ({
+  template: JST["shelves/shelf_show"],
+  className: "shelf",
 
   initialize: function () {
     this.listenTo(this.collection, "sync", this.render);
@@ -16,11 +17,11 @@ GoodTomes.Views.ShelvesIndex = Backbone.CompositeView.extend ({
   },
 
   addTomeView: function (tome) {
-    var subview = new GoodTomes.Views.TomesIndexItem({ model: tome });
-    this.addSubview('.tome-items', subview);
+    var subview = new GoodTomes.Views.ShelfTomeItem({ model: tome });
+    this.addSubview('.shelf-items', subview);
   },
 
   removeTomeView: function (tome) {
-    this.removeModelSubview('.tome-items .row', tome);
+    this.removeModelSubview('.shelf-items', tome);
   }
 });

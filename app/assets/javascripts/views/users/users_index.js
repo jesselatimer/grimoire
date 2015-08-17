@@ -22,6 +22,6 @@ GoodTomes.Views.UsersIndex = Backbone.CompositeView.extend ({
   },
 
   removeUserView: function (user) {
-    this.removeModelSubview('.user-items .row', user);
+    this.removeModelSubview('.user-items', user);
   }
 });
