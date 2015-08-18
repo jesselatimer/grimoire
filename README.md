@@ -7,6 +7,8 @@
 <!-- Image for shelves: -->
 <!-- shelf image /assets/shelf.png -->
 
+<!-- When opening the page for the first time while already logged on, the back button doesn't work. Find a way to have Backbone.navigate set referral. -->
+
 ## Minimum Viable Product
 grimoire is goodreads for magical practitioners built on Rails and Backbone.
 Users can:

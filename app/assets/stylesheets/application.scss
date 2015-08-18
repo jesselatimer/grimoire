@@ -357,8 +357,20 @@ header {
     float: right;
   }
 
+  .timestamp {
+    font-size: smaller;
+    margin-top: 10px;
+    color: lighten(#181818, 40%);
+  }
+
+  .title {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
   img.thumbnail {
     width: 100%;
+    margin-bottom: 0;
   }
 
   img.thumbnail:hover {
