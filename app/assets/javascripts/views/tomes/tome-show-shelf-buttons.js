@@ -1,10 +1,9 @@
 GoodTomes.Views.TomeShowShelfButton = Backbone.View.extend ({
   template: JST["tomes/tome_show_shelf_button"],
-  tagName: "button",
-  className: "add-to-shelf btn btn-success",
+  className: "shelf-button",
 
   events: {
-    "click" : "addToShelf"
+    "click .add-to-shelf" : "addToShelf"
   },
 
   initialize: function (options) {
@@ -18,8 +17,10 @@ GoodTomes.Views.TomeShowShelfButton = Backbone.View.extend ({
     var renderedContent = this.template({ shelf: this.shelf });
     this.$el.html(renderedContent);
     if (this.tome.shelving().get("shelf_id") === this.shelf.id) {
-      this.$el.attr("disabled", true);
-      this.$el.prepend('<i class="fa fa-check"></i>');
+      this.$('.add-to-shelf').attr("disabled", true);
+      this.$('.add-to-shelf').prepend('<i class="fa fa-check"></i>');
+      this.$('.add-to-shelf').addClass('selected');
+      this.$('.remove-from-shelf').addClass('selected');
     }
   },
 

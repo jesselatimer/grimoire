@@ -1,11 +1,11 @@
   <div class="user-form-wrapper">
-    <form class="user-form" action="<%= url %>" method="post">
+    <form class="user-form" id="<%= id %>" action="<%= url %>" method="post">
       <%= auth_token %>
 
-      <input type="text" class="form-control" name="user[username]" placeholder="WizardName" value="<%= @user && @user.username %>">
+      <input type="text" class="form-control" name="user[username]" placeholder="PractitionerName" value="<%= @user && @user.username %>">
 
       <input type="password" class="form-control" name="user[password]" placeholder="Password">
 
-      <input type="submit" value="<%= submit_value %>" class="btn btn-primary full-width">
+      <input type="submit" value="<%= submit_value %>" class="btn <%= button_class %> full-width">
     </form>
   </div>

@@ -12,13 +12,13 @@ Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create accounts (include guest account)
+- [x] Create accounts (include guest account)
 - [x] Create sessions (log in)
 - [x] Explore tomes
 - [x] Explore users
 - [ ] View users and see their reviews
 - [ ] View tomes and see its reviews
-- [ ] Add tomes to shelves
+- [x] Add tomes to shelves
 - [ ] Review tomes
 - [ ] Rate tomes
 - [ ] See comments under reviews

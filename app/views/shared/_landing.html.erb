@@ -4,16 +4,31 @@
   </a>
 
   <% if !current_user %>
-    <%= render partial: "shared/form", locals: { url: url, submit_value: submit_value } %>
-    <div class="log-state">
-      <% if session %>
-        <%= link_to "Sign In", new_session_url, class: "btn selected" %>
-        <%= link_to "Sign Up", new_user_url, class: "btn inactive" %>
-      <% else %>
-        <%= link_to "Sign In", new_session_url, class: "btn inactive" %>
-        <%= link_to "Sign Up", new_user_url, class: "btn selected" %>
-      <% end %>
+    <div class="session">
+      <%= render partial: "shared/form", locals: {
+        url: "/session",
+        submit_value: "Sign In",
+        button_class: "btn-primary",
+        id: "session-form"
+      } %>
+      <div class="log-state">
+        <%= link_to "Sign In", "#", class: "btn selected sign-in" %>
+        <%= link_to "Sign Up", "#", class: "btn inactive sign-up" %>
+      </div>
     </div>
+    <div class="user">
+      <%= render partial: "shared/form", locals: {
+        url: "/users",
+        submit_value: "Sign Up",
+        button_class: "btn-success",
+        id: "user-form"
+      } %>
+      <div class="log-state">
+        <%= link_to "Sign In", "#", class: "btn inactive sign-in" %>
+        <%= link_to "Sign Up", "#", class: "btn selected sign-up" %>
+      </div>
+    </div>
+    <%= link_to 'Speak "Guest" and Enter', '#', class: "btn guest" %>
   <% else %>
     <div class="user-form-wrapper">
       <p>
@@ -25,3 +40,26 @@
     </div>
   <% end %>
 </div>
+
+<script type="text/javascript">
+  var userButton = $('.sign-up');
+  var sessionButton = $('.sign-in');
+  var guestButton = $('.guest');
+
+  userButton.click(function () {
+    $('.user').css("display", "block");
+    $('.session').css("display", "none");
+  });
+
+  sessionButton.click(function () {
+    $('.session').css("display", "block");
+    $('.user').css("display", "none");
+  });
+
+  guestButton.click(function () {
+    $('.sign-in').click();
+    $('#session-form input[name="user[username]"]').val("shrouded_in_mystery");
+    $('#session-form input[name="user[password]"]').val("password");
+    $('#session-form').submit();
+  });
+</script>

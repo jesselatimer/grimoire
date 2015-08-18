@@ -19,30 +19,31 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
     var renderedContent = this.template({ tome: this.model });
     this.$el.html(renderedContent);
     this.attachSubviews();
-    this.attachRemoveShelfButton();
     return this;
   },
 
   toggleButton: function (e) {
     this.$('[disabled] i').remove();
     this.$('[disabled]').attr('disabled', false);
-    this.$(e.currentTarget).attr('disabled', true);
-    this.$(e.currentTarget).prepend('<i class="fa fa-check"></i>');
-    this.attachRemoveShelfButton();
-  },
+    this.$('.selected').removeClass('selected');
 
-  attachRemoveShelfButton: function () {
-    if (!this.model.shelving().isEmpty() && this.$('.remove-from-shelf').length === 0) {
-      var button = $('<button type="button" class="remove-from-shelf btn btn-danger">Remove from Shelves</button>');
-      this.$('.shelf-wrapper').append(button);
-    }
+    this.$(e.currentTarget).attr('disabled', true);
+    this.$(e.currentTarget).addClass('selected');
+    this.$(e.currentTarget).parent().find('.remove-from-shelf').addClass('selected');
+    this.$(e.currentTarget).prepend('<i class="fa fa-check"></i>');
   },
 
   removeFromShelf: function (e) {
-    this.$('.remove-from-shelf').remove();
-    this.model.shelving().destroy();
-    this.model.shelving().clear();
-    this.toggleButton(e);
+    bootbox.confirm("Are you sure you want to remove " + this.model.escape("title") + " from your shelves?", function (result) {
+      if (result) {
+        this.model.shelving().destroy();
+        this.model.shelving().clear();
+
+        this.$('[disabled] i').remove();
+        this.$('[disabled]').attr('disabled', false);
+        this.$('.selected').removeClass('selected');
+      }
+    }.bind(this));
   },
 
   addShelfButton: function (shelf) {

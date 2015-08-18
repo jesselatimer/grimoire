@@ -1,6 +1,11 @@
 <div class="user-show-wrapper">
   <% if (CURRENT_USER.id === user.id) { %>
-    <h1>Your Profile</h1>
+    <h1>
+      Your Profile
+    </h1>
+    <a href="" class="edit-button">
+      <i class="fa fa-pencil-square-o"></i>
+    </a>
   <% } %>
   <div class="col-sm-4 col-xs-12">
     <img src="<%= user.escape("image_url") %>" />
@@ -10,7 +15,7 @@
     <h4 class="truename"><%= user.escape("name") || "" %></h4>
     <p class="bio"><%= user.escape("bio") %></p>
   </div>
-  
+
   <a class="exit-button"><i class="fa fa-times-circle"></i></a>
 </div>
 

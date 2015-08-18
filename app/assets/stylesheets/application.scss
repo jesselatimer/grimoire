@@ -161,46 +161,61 @@ header {
   width: 40%;
   min-width: 150px;
   max-width: 400px;
-}
 
-.login-wrapper img {
-  width: 100%;
-  margin-bottom: -6%;
-}
+  .session { display: block; }
+  .user { display: none; }
 
-.user-form-wrapper {
-  padding: 20px;
-  border: 2px #E3DFC9 solid;
-  background-color: #F0F0E4;
-}
-
-.user-form input { margin-bottom: 15px; }
-.user-form :last-child { margin-bottom: 0; }
-.log-state {
-  :first-child { float: left; }
-  :last-child { float: right; }
-
-  .btn {
-    width: 49%;
+  .guest {
+    width: 70%;
+    min-width: 200px;
     box-sizing: border-box;
     border-radius: 0px;
     border: 2px #E3DFC9 solid;
-    border-top: 0;
     background-color: #F0F0E4;
-    margin-top: -2px;
+    display: block;
+    margin: 50px auto 0;
+    clear: both;
   }
 
-  .inactive {
-    opacity: .8;
-    transition: ease .2s;
-    border-top: 2px #E3DFC9 solid;
-    padding-top: 4px;
-    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  img {
+    width: 100%;
+    margin-bottom: -6%;
   }
-  .inactive:hover { opacity: 1; }
 
+  .user-form-wrapper {
+    padding: 20px;
+    border: 2px #E3DFC9 solid;
+    background-color: #F0F0E4;
+    .user-form input { margin-bottom: 15px; }
+    .user-form :last-child { margin-bottom: 0; }
+  }
+
+  .log-state {
+    :first-child { float: left; }
+    :last-child { float: right; }
+
+    .btn {
+      width: 49%;
+      box-sizing: border-box;
+      border-radius: 0px;
+      border: 2px #E3DFC9 solid;
+      border-top: 0;
+      background-color: #F0F0E4;
+      margin-top: -2px;
+    }
+
+    .inactive {
+      opacity: .8;
+      transition: ease .2s;
+      border-top: 2px #E3DFC9 solid;
+      padding-top: 4px;
+      -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }
+    .inactive:hover { opacity: 1; }
+  }
 }
+
 
 .index-item-wrapper {
   margin-bottom: 20px;
@@ -346,6 +361,13 @@ header {
     cursor: pointer;
   }
 
+  .edit-button {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    font-size: 20px;
+  }
+
   .author {
     font-size: smaller;
     color: #444;
@@ -373,10 +395,40 @@ header {
   clear: left;
   width: 100%;
 
-  .btn {
-    width: 100%;
-    overflow: hidden;
-    display: block;
-    margin: 5px 0;
+  .shelf-button {
+    position: relative;
+
+    .btn {
+      overflow: hidden;
+      display: block;
+    }
+
+    .add-to-shelf {
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    .add-to-shelf.selected {
+      padding-right: 30px;
+    }
+
+    .remove-from-shelf {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #d9534f;
+    }
+
+    .remove-from-shelf.selected {
+      display: block;
+    }
+
+    .removeFromShelf:hover {
+      color: #c9302c;
+      cursor: pointer;
+    }
   }
+
 }
