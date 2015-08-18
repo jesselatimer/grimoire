@@ -1,5 +1,6 @@
 GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
   template: JST["reviews/review_show"],
+  className: "review",
 
   initialize: function (options) {
     this.showPage = options.showPage;
@@ -7,7 +8,7 @@ GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
   },
 
   render: function () {
-    var renderedContent = this.template({ review: this.model, author: this.model.author(), showPage: this.showPage });
+    var renderedContent = this.template({ review: this.model, showPage: this.showPage });
     this.$el.html(renderedContent);
     return this;
   }

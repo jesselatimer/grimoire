@@ -3,12 +3,7 @@ GoodTomes.Models.User = Backbone.Model.extend ({
 
   parse: function (response) {
     if (response.shelves) {
-      this.shelves().set(response.shelves);
-      this.shelves().each(function (shelf) {
-        if (shelf.attributes.tomes) {
-          shelf.tomes().set(shelf.attributes.tomes);
-        }
-      });
+      this.shelves().set(response.shelves, { parse: true });
       delete response.shelves;
     }
     return response;

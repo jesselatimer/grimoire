@@ -26,6 +26,7 @@ GoodTomes.Routers.Router = Backbone.Router.extend ({
     var tome = this.tomes.getOrFetch(id);
     var view = new GoodTomes.Views.TomeShow({ model: tome });
     this._swapView(view);
+    $(document).scrollTop(0);
   },
 
   tomeForm: function (id) {
@@ -37,6 +38,7 @@ GoodTomes.Routers.Router = Backbone.Router.extend ({
     }
     var view = new GoodTomes.Views.TomeForm({ model: tome, collection: this.tomes });
     this._swapView(view);
+    $(document).scrollTop(0);
   },
 
   usersIndex: function () {
@@ -48,6 +50,7 @@ GoodTomes.Routers.Router = Backbone.Router.extend ({
     var user = this.users.getOrFetch(id);
     var view = new GoodTomes.Views.UserShow({ model: user });
     this._swapView(view);
+    $(document).scrollTop(0);
   },
 
   _swapView: function (view) {

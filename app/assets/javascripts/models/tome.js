@@ -36,12 +36,7 @@ GoodTomes.Models.Tome = Backbone.Model.extend ({
       delete response.author;
     }
     if (response.reviews) {
-      this.reviews().set(response.reviews);
-      this.reviews().each(function (review) {
-        if (review.attributes.author) {
-          review.author().set(review.attributes.author);
-        }
-      });
+      this.reviews().set(response.reviews, { parse: true });
       delete response.reviews;
     }
     return response;

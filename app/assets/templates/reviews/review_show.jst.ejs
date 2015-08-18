@@ -1,7 +1,19 @@
 <% if (showPage === "Tome") { %>
-  <%= author.escape("username") %>
+  <div class="review-sidebar">
+    <a href="#/users/<%= review.author().id %>">
+      <img src="<%= review.author().escape("image_url") %>" alt="" class="thumbnail" />
+    </a>
+  </div>
+  <div class="review-body">
+    <p class="author">
+      <a href="#/users/<%= review.author().id %>">
+        <%= review.author().escape("username") %></a>
+      <% if (review.get("rating")) { %>
+        rated it <%= review.escape("rating") %>
+      <% } else { %>
+        reviewed it
+      <% } %>
+    </p>
+    <%= review.escape("body") || review.escape("rating") %>
+  </div>
 <% } %>
-
-<%= showPage %>
-
-<%= review.escape("body") || review.escape("rating") %>

@@ -76,7 +76,7 @@ h3 {
 
 h4 {
   font-size: 20px;
-  // margin: 0 0 15px 30px;
+  margin: 15px 0;
   word-wrap: break-word;
 }
 
@@ -115,24 +115,6 @@ header {
     }
     .sign-out:hover {
       background-color: #bdbd98;
-    }
-
-    .sign-out ~ .on-hover {
-      opacity: 0;
-      position: absolute;
-      top: 37px;
-      right: 10px;
-      background-color: #bdbd98;
-      padding: 4px 10px;
-      border-radius: 0 0 3px 3px;
-      width: 85px;
-      border-top: 2px #E3DFC9 solid;
-      padding-top: 4px;
-      -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    }
-    .sign-out:hover ~ .on-hover {
-      opacity: 1;
     }
 
     .dropdown-menu {
@@ -330,6 +312,7 @@ header {
 }
 
 .user-show-wrapper, .tome-show-wrapper {
+  min-width: 400px;
   width: 90%;
   margin: auto;
   padding: 15px;
@@ -345,9 +328,41 @@ header {
     color: #382110;
   }
 
-  img {
+  img.profile-pic {
     border: 1px solid gray;
     width: 100%;
+  }
+
+  .review {
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .review:after {
+    content: " ";
+    height: 0px;
+    clear: both;
+    display: block;
+  }
+
+  .review-sidebar {
+    width: 10%;
+    float: left;
+  }
+
+  .review-body {
+    width: 86%;
+    float: right;
+  }
+
+  img.thumbnail {
+    width: 100%;
+  }
+
+  img.thumbnail:hover {
+    border: 1px gray solid;
   }
 
   .exit-button {
@@ -409,25 +424,23 @@ header {
     }
 
     .add-to-shelf.selected {
-      padding-right: 30px;
+      margin-right: 38px;
+      width: auto;
+      border-radius: 5px 0 0 5px;
+      cursor: default;
     }
 
     .remove-from-shelf {
       display: none;
       position: absolute;
-      right: 10px;
+      right: 0;
       top: 50%;
       transform: translateY(-50%);
-      color: #d9534f;
+      border-radius: 0 5px 5px 0;
     }
 
     .remove-from-shelf.selected {
       display: block;
-    }
-
-    .removeFromShelf:hover {
-      color: #c9302c;
-      cursor: pointer;
     }
   }
 
