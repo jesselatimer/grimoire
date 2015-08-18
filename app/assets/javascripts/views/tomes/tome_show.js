@@ -10,9 +10,12 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
+
     this.listenTo(CURRENT_USER.shelves(), "add", this.addShelfButton);
     this.listenTo(CURRENT_USER.shelves(), "remove", this.removeShelfButton);
     CURRENT_USER.shelves().each(this.addShelfButton.bind(this));
+
+    this.attachReviewsIndex();
   },
 
   render: function () {
@@ -53,6 +56,11 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
 
   removeShelfButton: function (shelf) {
     this.removeModelSubview('.add-to-shelf-wrapper', shelf);
+  },
+
+  attachReviewsIndex: function () {
+    var subview = new GoodTomes.Views.ReviewsIndex({ collection: this.model.reviews(), showPage: "Tome" });
+    this.addSubview('.reviews-wrapper', subview);
   },
 
   back: function () {

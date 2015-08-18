@@ -25,6 +25,7 @@ class User < ActiveRecord::Base
   has_many :authored_tomes, class_name: :Tome, foreign_key: :author_id
   has_many :shelves, class_name: :Shelf
   has_many :shelvings, through: :shelves
+  has_many :reviews, foreign_key: :author_id
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

@@ -4,23 +4,24 @@
 
 [heroku]: #
 
+<!-- Image for shelves: -->
 <!-- shelf image /assets/shelf.png -->
 
 ## Minimum Viable Product
-goodtomes is a clone of goodreads for fantasy-themed fictional books built on
-Rails and Backbone. Users can:
+grimoire is goodreads for magical practitioners built on Rails and Backbone.
+Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
 - [x] Create accounts (include guest account)
 - [x] Create sessions (log in)
-- [x] Explore tomes
-- [x] Explore users
-- [ ] View users and see their reviews
-- [ ] View tomes and see its reviews
-- [x] Add tomes to shelves
-- [ ] Review tomes
-- [ ] Rate tomes
+- [x] Explore grimoires
+- [x] Explore practitioners
+- [x] View practitioners
+- [x] View grimoires
+- [x] Add grimoires to shelves
+- [ ] Review grimoires
+- [ ] Rate grimoires
 - [ ] See comments under reviews
 - [ ] Leave comments on reviews
 - [ ] See a feed of recent reviews
@@ -89,7 +90,7 @@ users will have access to the full functionality of the MVP.
 - [ ] Follow users with the option to see only followed users in feed
 - [ ] Activity history (e.g. reviews, adding tomes to categories, commenting)
 - [ ] Multiple sessions/session management
-- [ ] Uploaded instead of hotlinked user avatars (Filepicker)
+- [ ] Uploaded instead of hotlinked user avatars (Cloudinary)
 - [ ] Markdown in user inputted fields (Markdown-js/Bootstrap Markdown)
 - [ ] Typeahead search bar
 

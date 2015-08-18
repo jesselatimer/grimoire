@@ -15,6 +15,13 @@ GoodTomes.Models.Tome = Backbone.Model.extend ({
     return this._author;
   },
 
+  reviews: function () {
+    if (!this._reviews) {
+      this._reviews = new GoodTomes.Collections.Reviews();
+    }
+    return this._reviews;
+  },
+
   isShelved: function () {
     return !this.shelving().isNew();
   },
@@ -27,6 +34,15 @@ GoodTomes.Models.Tome = Backbone.Model.extend ({
     if (response.author) {
       this.author().set(response.author);
       delete response.author;
+    }
+    if (response.reviews) {
+      this.reviews().set(response.reviews);
+      this.reviews().each(function (review) {
+        if (review.attributes.author) {
+          review.author().set(review.attributes.author);
+        }
+      });
+      delete response.reviews;
     }
     return response;
   }

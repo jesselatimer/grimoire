@@ -1,0 +1,7 @@
+<% if (showPage === "Tome") { %>
+  <%= author.escape("username") %>
+<% } %>
+
+<%= showPage %>
+
+<%= review.escape("body") || review.escape("rating") %>

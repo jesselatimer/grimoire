@@ -21,6 +21,7 @@ class Tome < ActiveRecord::Base
   has_many :shelvings
   has_many :shelves, through: :shelvings
   has_many :users, through: :shelves
+  has_many :reviews
 
   def ensure_cover_url
     if self.cover_url == "" || nil
