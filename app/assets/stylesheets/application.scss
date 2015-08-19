@@ -2,6 +2,7 @@
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "fontawesome-stars";
 
 /* Start CSS reset */
  html, body, div, span, applet, object, iframe,
@@ -486,4 +487,9 @@ header {
 
 .new-review-button-wrapper {
   font-size: smaller;
+}
+
+.br-wrapper {
+  display: inline-block;
+  margin-left: 5px;
 }

@@ -19,6 +19,11 @@ GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
   render: function () {
     var renderedContent = this.template({ review: this.model, showPage: this.showPage });
     this.$el.html(renderedContent);
+    this.$('.rating').barrating({
+      theme: 'fontawesome-stars',
+      initialRating: this.model.get("rating"),
+      readonly: true
+    });
     return this;
   },
 

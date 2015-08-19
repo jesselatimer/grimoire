@@ -9,7 +9,14 @@
       <a href="#/users/<%= review.author().id %>">
         <%= review.author().escape("username") %></a>
       <% if (review.get("rating")) { %>
-        rated it <%= review.escape("rating") %>
+        rated it
+        <select class="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
       <% } else { %>
         reviewed it
       <% } %>
@@ -18,7 +25,7 @@
       <%= review.escape("title") %>
     </p>
     <p class="review-content">
-      <%= review.escape("body") || review.escape("rating") %>
+      <%= review.escape("body") %>
     </p>
     <p class="timestamp">
       <%= jQuery.timeago(review.escape("created_at")) %>
