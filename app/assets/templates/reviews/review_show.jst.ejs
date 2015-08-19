@@ -25,3 +25,12 @@
     </p>
   </div>
 <% } %>
+
+<% if (CURRENT_USER.id === review.author().id) { %>
+  <a class="delete-review-button">
+    <i class="fa fa-trash-o"></i>
+  </a>
+  <a class="edit-review-button">
+    <i class="fa fa-pencil-square-o"></i>
+  </a>
+<% } %>

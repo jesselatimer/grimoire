@@ -334,6 +334,7 @@ header {
   }
 
   .review {
+    position: relative;
     border-radius: 10px;
     border: 1px solid gray;
     padding: 15px;
@@ -465,4 +466,24 @@ header {
   margin: 10px auto;
   border-radius: 10px;
   text-align: center;
+}
+
+.delete-review-button, .edit-review-button {
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+}
+.delete-review-button { right: 10px; }
+.edit-review-button { right: 40px; }
+
+.review-form {
+  display: none;
+}
+
+.new-review-button {
+  cursor: pointer;
+}
+
+.new-review-button-wrapper {
+  font-size: smaller;
 }

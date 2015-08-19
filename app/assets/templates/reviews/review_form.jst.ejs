@@ -3,7 +3,10 @@
   <input type="text" name="review[title]" value="<%= review.escape("title") %>" placeholder="Title (optional)" class="form-control input-sm">
 </div>
 <div class="form-group">
-  <input type="text" name="review[rating]" value="<%= review.escape("rating") %>" placeholder="Rating" class="form-control">
+  <div class="rating">
+
+  </div>
+  <!-- <input type="text" name="review[rating]" value="<%= review.escape("rating") %>" placeholder="Rating" class="form-control"> -->
 </div>
 
 <div class="form-group">
@@ -12,4 +15,5 @@
 
 <div class="form-group">
   <input type="submit" value="Save Review" class="btn btn-default">
+  <input type="button" value="Cancel" class="cancel-form btn btn-warning">
 </div>

@@ -15,6 +15,7 @@ GoodTomes.Views.ReviewForm = Backbone.View.extend ({
     var renderedContent = this.template({ review: this.model });
     this.$el.html(renderedContent);
     this.$('.form-errors').css("display", "none");
+
     return this;
   },
 
@@ -28,6 +29,7 @@ GoodTomes.Views.ReviewForm = Backbone.View.extend ({
 
     this.model.save({}, {
       success: function () {
+        this.$el.parent().css("display", "none");
         this.collection.add(this.model, { merge: true });
       }.bind(this),
 
