@@ -13,15 +13,8 @@
 #
 
 class Review < ActiveRecord::Base
-  validates :author, :tome, presence: true
+  validates :author, :tome, :rating, presence: true
   validates :author_id, uniqueness: { scope: :tome_id }
-  validate :ensure_rating_or_review
   belongs_to :author, class_name: :User
   belongs_to :tome
-
-  def ensure_rating_or_review
-    if body.nil? && rating.nil?
-      errors.add(:rating, 'Need a review or rating.')
-    end
-  end
 end

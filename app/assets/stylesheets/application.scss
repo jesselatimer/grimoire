@@ -455,5 +455,14 @@ header {
       display: block;
     }
   }
+}
 
+.form-errors {
+  background-color: #EE6363;
+  border: 1px solid darken(#EE6363, 20%);
+  padding: 5px;
+  width: 60%;
+  margin: 10px auto;
+  border-radius: 10px;
+  text-align: center;
 }

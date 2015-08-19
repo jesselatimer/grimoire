@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :tomes, only: [:index, :show, :create, :update]
     resources :shelves, only: [:show, :create, :update, :destroy]
     resources :shelvings, only: [:create, :destroy]
+    resources :reviews, only: [:create, :update, :destroy]
   end
 end

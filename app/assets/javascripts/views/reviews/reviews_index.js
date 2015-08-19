@@ -29,8 +29,10 @@ GoodTomes.Views.ReviewsIndex = Backbone.CompositeView.extend ({
   },
 
   attachReviewForm: function () {
+    // get current user's review, pass that in. That way same form for edit/new
+    // set current users review apart on page
     var review = new GoodTomes.Models.Review();
-    var subview = new GoodTomes.Views.ReviewForm({ model: review, collection: this.collection });
+    var subview = new GoodTomes.Views.ReviewForm({ tome: this.model, model: review, collection: this.collection });
     this.addSubview('.review-form', subview);
   }
 });

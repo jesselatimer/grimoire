@@ -59,7 +59,7 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
   },
 
   attachReviewsIndex: function () {
-    var subview = new GoodTomes.Views.ReviewsIndex({ collection: this.model.reviews(), showPage: "Tome" });
+    var subview = new GoodTomes.Views.ReviewsIndex({ model: this.model, collection: this.model.reviews(), showPage: "Tome" });
     this.addSubview('.reviews-wrapper', subview);
   },
 
