@@ -10,6 +10,8 @@ GoodTomes.Views.UserShow = Backbone.CompositeView.extend ({
     this.listenTo(this.model.shelves(), "add", this.addShelfView);
     this.listenTo(this.model.shelves(), "remove", this.removeShelfView);
     this.model.shelves().each(this.addShelfView.bind(this));
+
+    this.attachReviewsIndex();
   },
 
   render: function () {
@@ -17,6 +19,11 @@ GoodTomes.Views.UserShow = Backbone.CompositeView.extend ({
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;
+  },
+
+  attachReviewsIndex: function () {
+    var subview = new GoodTomes.Views.UserReviewsIndex({ model: this.model, collection: this.model.reviews() });
+    this.addSubview('.reviews-wrapper', subview);
   },
 
   back: function () {

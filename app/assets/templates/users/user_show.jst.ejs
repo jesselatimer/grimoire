@@ -1,20 +1,18 @@
 <div class="user-show-wrapper">
   <% if (CURRENT_USER.id === user.id) { %>
-    <h1>
-      Your Profile
-    </h1>
     <a href="#/users/<%= user.id %>/edit" class="edit-button">
       <i class="fa fa-pencil-square-o"></i>
     </a>
   <% } %>
-  <div class="col-sm-4 col-xs-12">
+  <div class="col-sm-4 col-xs-12 tome-sidebar">
     <img src="<%= user.escape("image_url") %>" class="profile-pic" />
-  </div>
-  <div class="content col-sm-8 col-xs-12">
     <h3 class="username"><%= user.escape("username") %></h3>
     <h4 class="truename"><%= user.escape("name") || "" %></h4>
     <p class="canon"><%= user.escape("canon") %></p>
     <p class="bio"><%= user.escape("bio") %></p>
+  </div>
+  <div class="content col-sm-8 col-xs-12 content">
+    <div class="reviews-wrapper"></div>
   </div>
 
   <a class="exit-button"><i class="fa fa-times-circle"></i></a>

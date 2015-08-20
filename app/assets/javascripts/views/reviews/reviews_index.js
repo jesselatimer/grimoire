@@ -8,8 +8,6 @@ GoodTomes.Views.ReviewsIndex = Backbone.CompositeView.extend ({
   },
 
   initialize: function (options) {
-    this.showPage = options.showPage;
-
     this.collection.sort();
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.model, 'sync', this.updateViews);
@@ -27,7 +25,7 @@ GoodTomes.Views.ReviewsIndex = Backbone.CompositeView.extend ({
   },
 
   addReviewSubview: function (review) {
-    var subview = new GoodTomes.Views.ReviewShow({ model: review, showPage: this.showPage, tome: this.model });
+    var subview = new GoodTomes.Views.ReviewShow({ model: review, tome: this.model });
     this.addSubview('.reviews-index', subview, true);
     this.updateViews();
   },
@@ -56,7 +54,7 @@ GoodTomes.Views.ReviewsIndex = Backbone.CompositeView.extend ({
   addUserReview: function (review) {
     this._userReviewView && this.removeSubview('.user-review', this._userReviewView);
     this.removeModelSubview('.reviews-index', review);
-    this._userReviewView = new GoodTomes.Views.ReviewShow({ model: review, showPage: this.showPage, tome: this.model });
+    this._userReviewView = new GoodTomes.Views.ReviewShow({ model: review, tome: this.model });
     this.addSubview('.user-review', this._userReviewView, true);
   },
 

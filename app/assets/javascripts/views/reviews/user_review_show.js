@@ -1,5 +1,5 @@
-GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
-  template: JST["reviews/review_show"],
+GoodTomes.Views.UserReviewShow = Backbone.View.extend ({
+  template: JST["reviews/user_review_show"],
   className: "review",
 
   events: {
@@ -7,16 +7,12 @@ GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
   },
 
   initialize: function (options) {
-    this.tome = options.tome;
-
-    if (CURRENT_USER.id === this.model.author().id) {
-      this.$el.addClass("current-user-review");
-    }
+    this.user = options.user;
     this.listenTo(this.model, "sync", this.render);
   },
 
   render: function () {
-    var renderedContent = this.template({ review: this.model });
+    var renderedContent = this.template({ review: this.model, user: this.user });
     this.$el.html(renderedContent);
     this.$('.rating').barrating({
       theme: 'fontawesome-stars',
@@ -27,14 +23,11 @@ GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
   },
 
   deleteReview: function (e) {
-    bootbox.confirm("Are you sure you want to delete your review of " + this.tome.escape("title") + "?", function (result) {
+    bootbox.confirm("Are you sure you want to delete your review of " + this.model.tome().escape("title") + "?", function (result) {
       if (result) {
         this.model.destroy({
           success: function () {
             this.remove();
-            // Fetch tome to update avg_rating
-            this.tome.unset("avg_rating");
-            this.tome.fetch();
           }.bind(this)
         });
       }
