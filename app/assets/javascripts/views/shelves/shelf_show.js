@@ -1,6 +1,6 @@
 GoodTomes.Views.ShelfShow = Backbone.CompositeView.extend ({
   template: JST["shelves/shelf_show"],
-  className: "shelf",
+  className: "shelf panel panel-default",
 
   initialize: function () {
     this.listenTo(this.collection, "sync", this.render);

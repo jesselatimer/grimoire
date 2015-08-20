@@ -1,9 +1,10 @@
 GoodTomes.Views.UserReviewShow = Backbone.View.extend ({
   template: JST["reviews/user_review_show"],
-  className: "review",
+  className: "review well",
 
   events: {
-    "click .delete-review-button" : "deleteReview"
+    "click .delete-review-button" : "deleteReview",
+    "click .edit-review-button" : "editReview"
   },
 
   initialize: function (options) {
@@ -22,7 +23,7 @@ GoodTomes.Views.UserReviewShow = Backbone.View.extend ({
     return this;
   },
 
-  deleteReview: function (e) {
+  deleteReview: function () {
     bootbox.confirm("Are you sure you want to delete your review of " + this.model.tome().escape("title") + "?", function (result) {
       if (result) {
         this.model.destroy({
@@ -32,5 +33,11 @@ GoodTomes.Views.UserReviewShow = Backbone.View.extend ({
         });
       }
     }.bind(this));
+  },
+
+  editReview: function () {
+    Backbone.history.navigate("/tomes/" + this.model.tome().id, {
+      trigger: true
+    });
   }
 });

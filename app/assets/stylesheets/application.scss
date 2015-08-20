@@ -260,62 +260,34 @@ header {
 }
 
 .shelves {
-  width: 90%;
-  margin: auto;
-  border-radius: 5px;
 
   .shelf {
     margin-bottom: 20px;
     min-width: 240px;
-    background-color: #F0F0E4;
-    padding: 15px;
 
     .shelf-item {
-      border: 2px #E3DFC9 solid;
-      background-color: #333;
+      // border: 2px #E3DFC9 solid;
+
+      td {
+        vertical-align: middle;
+      }
 
       a {
         text-decoration: none;
       }
 
       .shelf-item-content, .shelf-item-image {
-        transition: opacity .25s;
         overflow: hidden;
       }
 
-      .shelf-item-content {
-        opacity: 0;
-        position: absolute;
-        max-width: 80%;
-        max-height: 80%;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        padding: 15px;
-        text-align: center;
-        background-color: #F0F0E4;
-        border-radius: 3px;
-        font-size: 10px;
-        word-wrap: break-word;
-        box-sizing: border-box;
-        .author {
-          font-size: 8px;
-        }
-      }
-
       .shelf-item-image {
-        opacity: 1;
-        height: 150px;
-        width: 100%;
-        position: relative;
+        margin-bottom: 0;
+        width: 15%;
+
         img {
-          min-height: 100%;
-          width: 100%;
         }
       }
     }
-    .shelf-item:hover .shelf-item-image { opacity: .5; }
-    .shelf-item:hover .shelf-item-content { opacity: 1; }
   }
 }
 
@@ -343,9 +315,6 @@ header {
 
   .review {
     position: relative;
-    border-radius: 10px;
-    border: 1px solid gray;
-    padding: 15px;
     margin-bottom: 10px;
   }
 
@@ -391,6 +360,7 @@ header {
     top: 10px;
     right: 10px;
     font-size: 20px;
+    z-index: 5;
   }
 
   .exit-button:hover {
@@ -402,6 +372,7 @@ header {
     top: 10px;
     right: 40px;
     font-size: 20px;
+    z-index: 5;
   }
 
   .author {
@@ -431,7 +402,6 @@ header {
 }
 
 .shelf-wrapper {
-  padding: 15px;
   clear: left;
   width: 100%;
 
@@ -441,6 +411,7 @@ header {
     .btn {
       overflow: hidden;
       display: block;
+      padding: 10px 15px;
     }
 
     .add-to-shelf {
@@ -484,6 +455,7 @@ header {
   position: absolute;
   top: 10px;
   cursor: pointer;
+  z-index: 5;
 }
 .delete-review-button { right: 10px; }
 .edit-review-button { right: 40px; }
@@ -534,4 +506,13 @@ header {
 .num-ratings {
   font-size: 12px;
   text-align: center;
+}
+
+.user-show-wrapper .content {
+  margin-top: 15px;
+}
+
+.user-show-wrapper .reviews-wrapper h4 {
+  margin: 0;
+  margin-bottom: 15px;
 }

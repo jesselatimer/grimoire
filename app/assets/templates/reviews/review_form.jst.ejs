@@ -1,7 +1,5 @@
 <div class="form-errors"></div>
 <div class="form-group clear-fix">
-  <input type="text" name="review[title]" value="<%= review.escape("title") %>" placeholder="Title (optional)" class="form-control input-sm title-input">
-
   <select id="rating" name="review[rating]">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -9,6 +7,8 @@
     <option value="4">4</option>
     <option value="5">5</option>
   </select>
+
+  <input type="text" name="review[title]" value="<%= review.escape("title") %>" placeholder="Title (optional)" class="form-control input-sm title-input">
 </div>
 
 <div class="form-group">

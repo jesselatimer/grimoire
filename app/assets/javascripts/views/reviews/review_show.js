@@ -1,6 +1,6 @@
 GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
   template: JST["reviews/review_show"],
-  className: "review",
+  className: "review well",
 
   events: {
     "click .delete-review-button" : "deleteReview"
