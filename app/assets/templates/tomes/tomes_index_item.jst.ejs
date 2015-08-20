@@ -10,6 +10,7 @@
       <% } else { %>
         <span class="author"><%= tome.escape("author_name") || "unknown author" %></span>
       <% } %>
+      <br>
       <select class="avg-rating">
         <option value="0">0</option>
         <option value="1">1</option>
@@ -18,6 +19,7 @@
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
+      <p class="num-ratings"><%= tome.escape("num_ratings") %> rating<% if (tome.get("num_ratings") !== 1) { %>s<% } %></p>
     </div>
   </a>
 </div>
