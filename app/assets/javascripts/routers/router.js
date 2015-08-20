@@ -55,7 +55,7 @@ GoodTomes.Routers.Router = Backbone.Router.extend ({
   },
 
   userEdit: function (id) {
-    if (id === CURRENT_USER.id) {
+    if (parseInt(id) === CURRENT_USER.id) {
       var view = new GoodTomes.Views.UserEdit({ model: CURRENT_USER });
       this._swapView(view);
     } else {

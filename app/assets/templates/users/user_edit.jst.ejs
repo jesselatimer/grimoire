@@ -1,0 +1,23 @@
+<h3>Edit Your Profile</h3>
+
+<form class="edit-user-form">
+  <div class="form-group">
+    <label for="username">Practitioner Name</label>
+    <input class="form-control" type="text" name="user[username]" value="<%= user.escape("username") %>" placeholder="Practitioner Name">
+  </div>
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input class="form-control" type="text" name="user[name]" value="<%= user.escape("name") %>" placeholder="Full Name">
+  </div>
+  <div class="form-group">
+    <label for="canon">Canon</label>
+    <input class="form-control" type="text" name="user[canon]" value="<%= user.escape("canon") %>" placeholder="Canon (e.g. Harry Potter, The Cthulhu Mythos, etc.)">
+  </div>
+  <div class="form-group">
+    <label for="bio">Bio</label>
+    <textarea class="form-control" name="user[bio]" placeholder="Short description of you."><%= user.escape("bio") %></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-default submit-edits">Save Profile</button>
+  <button type="button" class="btn btn-danger cancel-edits">Cancel Edits</button>
+</form>
