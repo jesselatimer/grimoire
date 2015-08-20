@@ -6,20 +6,18 @@
   </div>
   <div class="review-body">
     <p class="author">
-      <a href="#/users/<%= review.author().id %>">
-        <%= review.author().escape("username") %></a>
-      <% if (review.get("rating")) { %>
-        rated it
-        <select class="rating">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      <% } else { %>
-        reviewed it
-      <% } %>
+      <span class="author-text">
+        <a href="#/users/<%= review.author().id %>">
+          <%= review.author().escape("username") %>
+        </a> rated it
+      </span>
+      <select class="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
     </p>
     <p class="title">
       <%= review.escape("title") %>

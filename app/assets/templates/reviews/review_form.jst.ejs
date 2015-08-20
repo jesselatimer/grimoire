@@ -1,8 +1,7 @@
 <div class="form-errors"></div>
-<div class="form-group">
-  <input type="text" name="review[title]" value="<%= review.escape("title") %>" placeholder="Title (optional)" class="form-control input-sm">
-</div>
-<div class="form-group">
+<div class="form-group no-margin">
+  <input type="text" name="review[title]" value="<%= review.escape("title") %>" placeholder="Title (optional)" class="form-control input-sm title-input">
+
   <select id="rating" name="review[rating]">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -10,14 +9,11 @@
     <option value="4">4</option>
     <option value="5">5</option>
   </select>
-  <!-- <input type="text" name="review[rating]" value="<%= review.escape("rating") %>" placeholder="Rating" class="form-control"> -->
 </div>
 
 <div class="form-group">
-  <textarea name="review[body]" placeholder="Body" class="form-control"><%= review.escape("body") %></textarea>
+  <textarea name="review[body]" placeholder="Body (optional)" class="form-control"><%= review.escape("body") %></textarea>
 </div>
 
-<div class="form-group">
-  <input type="submit" value="Save Review" class="btn btn-default">
-  <input type="button" value="Cancel" class="cancel-form btn btn-warning">
-</div>
+<button type="submit" class="btn btn-default">Save Review</button>
+<button type="button" class="cancel-form btn btn-warning">Cancel</button>

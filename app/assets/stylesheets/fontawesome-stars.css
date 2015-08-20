@@ -11,6 +11,7 @@
 
 .br-theme-fontawesome-stars .br-widget.br-readonly a {
   font: normal normal normal 18px/1 FontAwesome;
+  vertical-align: middle;
   pointer-events: none;
 }
 

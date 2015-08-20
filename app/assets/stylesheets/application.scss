@@ -402,6 +402,10 @@ header {
     color: #444;
     margin-bottom: 10px;
     margin-top: 5px;
+
+    .author-text {
+      vertical-align: middle;
+    }
   }
 
   .truename {
@@ -489,7 +493,30 @@ header {
   font-size: smaller;
 }
 
+.form-group {
+  position: relative;
+
+  .title-input {
+    width: calc(100% - 90px);
+  }
+}
+
+.no-margin {
+  margin: 0;
+}
+
 .br-wrapper {
   display: inline-block;
+}
+
+.br-widget {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2px;
+}
+
+.br-readonly {
+  position: static;
   margin-left: 5px;
 }
