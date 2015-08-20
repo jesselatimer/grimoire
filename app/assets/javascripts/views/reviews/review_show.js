@@ -30,11 +30,14 @@ GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
   deleteReview: function (e) {
     bootbox.confirm("Are you sure you want to delete your review of " + this.tome.escape("title") + "?", function (result) {
       if (result) {
-        this.model.destroy();
-        this.remove();
-
-        // Fetch tome to update avg_rating
-        this.tome.fetch();
+        this.model.destroy({
+          success: function () {
+            this.remove();
+            // Fetch tome to update avg_rating
+            this.tome.unset("avg_rating");
+            this.tome.fetch();
+          }.bind(this)
+        });
       }
     }.bind(this));
   }

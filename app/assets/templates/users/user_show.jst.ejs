@@ -3,7 +3,7 @@
     <h1>
       Your Profile
     </h1>
-    <a href="" class="edit-button">
+    <a href="#/users/<%= user.id %>/edit" class="edit-button">
       <i class="fa fa-pencil-square-o"></i>
     </a>
   <% } %>
@@ -13,6 +13,7 @@
   <div class="content col-sm-8 col-xs-12">
     <h3 class="username"><%= user.escape("username") %></h3>
     <h4 class="truename"><%= user.escape("name") || "" %></h4>
+    <p class="canon"><%= user.escape("canon") %></p>
     <p class="bio"><%= user.escape("bio") %></p>
   </div>
 

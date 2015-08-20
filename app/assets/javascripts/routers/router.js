@@ -6,7 +6,8 @@ GoodTomes.Routers.Router = Backbone.Router.extend ({
     "tomes/:id"      : "tomeShow",
     "tomes/:id/edit" : "tomeForm",
     "users"          : "usersIndex",
-    "users/:id"      : "userShow"
+    "users/:id"      : "userShow",
+    "users/:id/edit" : "userEdit"
   },
 
   initialize: function (options) {
@@ -51,6 +52,16 @@ GoodTomes.Routers.Router = Backbone.Router.extend ({
     var view = new GoodTomes.Views.UserShow({ model: user });
     this._swapView(view);
     $(document).scrollTop(0);
+  },
+
+  userEdit: function (id) {
+    if (id === CURRENT_USER.id) {
+      var view = new GoodTomes.Views.UserEdit({ model: CURRENT_USER });
+      this._swapView(view);
+    } else {
+      bootbox.alert("You must be logged on to do that.");
+      Backbone.history.navigate("#/users/" + id);
+    }
   },
 
   _swapView: function (view) {
