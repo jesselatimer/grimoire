@@ -15,6 +15,10 @@
   pointer-events: none;
 }
 
+.tome-sidebar .br-theme-fontawesome-stars .br-widget.br-readonly a {
+  font: normal normal normal 30px/1 FontAwesome;
+}
+
 .br-theme-fontawesome-stars .br-widget a:after {
   content: '\f0e7';
   color: #dddddd;

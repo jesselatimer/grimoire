@@ -45,6 +45,13 @@
  }
 /* End Reset */
 
+.clear-fix:after {
+  content: " ";
+  height: 0px;
+  clear: both;
+  display: block;
+}
+
 html {
   position: relative;
   width: 100%;
@@ -498,11 +505,8 @@ header {
 
   .title-input {
     width: calc(100% - 90px);
+    float: right;
   }
-}
-
-.no-margin {
-  margin: 0;
 }
 
 .br-wrapper {
@@ -512,11 +516,22 @@ header {
 .br-widget {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   margin: 2px;
 }
 
 .br-readonly {
   position: static;
   margin-left: 5px;
+}
+
+.tome-sidebar .br-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.num-ratings {
+  font-size: 12px;
+  text-align: center;
 }

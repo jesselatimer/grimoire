@@ -5,7 +5,8 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
   events: {
     "click .add-to-shelf" : "toggleButton",
     "click .remove-from-shelf" : "removeFromShelf",
-    "click .exit-button" : "back"
+    "click .exit-button" : "back",
+    "submit .review-form" : "resetAvgRating"
   },
 
   initialize: function () {
@@ -22,6 +23,11 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
     var renderedContent = this.template({ tome: this.model });
     this.$el.html(renderedContent);
     this.attachSubviews();
+    this.$('.avg-rating').barrating({
+      theme: 'fontawesome-stars',
+      initialRating: this.model.get("avg_rating"),
+      readonly: true
+    });
     return this;
   },
 
@@ -61,6 +67,10 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
   attachReviewsIndex: function () {
     var subview = new GoodTomes.Views.ReviewsIndex({ model: this.model, collection: this.model.reviews(), showPage: "Tome" });
     this.addSubview('.reviews-wrapper', subview);
+  },
+
+  resetAvgRating: function () {
+    this.model.fetch();
   },
 
   back: function () {

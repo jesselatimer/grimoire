@@ -1,5 +1,19 @@
-<div class="col-sm-4 col-xs-12">
+<div class="col-sm-4 col-xs-12 tome-sidebar">
   <img src="<%= tome.escape("cover_url") %>" class="profile-pic" />
+  <select class="avg-rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <p class="num-ratings">
+    <% if (tome.get("num_ratings") === 0) { %>
+      No ratings.
+    <% } else { %>
+      Based on <%= tome.escape("num_ratings") %> rating<% if (tome.get("num_ratings") !== 1) { %>s<% } %>.
+    <% } %>
+  </p>
   <div class="shelf-wrapper col-sm-4 col-xs-12">
     <h4>Add to Shelf:</h4>
     <div class="add-to-shelf-wrapper"></div>

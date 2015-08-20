@@ -32,6 +32,9 @@ GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
       if (result) {
         this.model.destroy();
         this.remove();
+
+        // Fetch tome to update avg_rating
+        this.tome.fetch();
       }
     }.bind(this));
   }
