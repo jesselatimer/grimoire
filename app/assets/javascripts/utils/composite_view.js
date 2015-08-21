@@ -46,6 +46,13 @@ Backbone.CompositeView = Backbone.View.extend({
     });
   },
 
+  attachSortedSubviews: function () {
+    var models = this.collection.models.slice();
+    this.collection.set([]);
+    this.collection.set(models);
+    this.attachSubviews();
+  },
+
   eachSubview: function(callback) {
     this.subviews().each(function (selectorSubviews, selector) {
       selectorSubviews.each(function (subview) {

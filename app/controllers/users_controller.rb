@@ -9,9 +9,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      @user.shelves.create!(title: "Read")
-      @user.shelves.create!(title: "Currently Reading")
-      @user.shelves.create!(title: "Want to Read")
+      @user.shelves.create!(title: "Mastered")
+      @user.shelves.create!(title: "Currently Studying")
+      @user.shelves.create!(title: "Wish to Study")
       login!(@user)
       redirect_to root_url
     else

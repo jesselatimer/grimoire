@@ -11,7 +11,11 @@
   <p class="bio"><%= user.escape("bio") %></p>
 </div>
 <div class="content col-sm-8 col-xs-12 content">
-  <h2><%= user.escape("name") || user.escape("username") %>'s Shelves</h2>
+  <% if (CURRENT_USER.id === user.id) { %>
+    <h2>Your Shelves</h2>
+  <% } else { %>
+    <h2><%= user.escape("name") || user.escape("username") %>'s Shelves</h2>
+  <% } %>
   <div class="shelves"></div>
   <div class="reviews-wrapper"></div>
 </div>

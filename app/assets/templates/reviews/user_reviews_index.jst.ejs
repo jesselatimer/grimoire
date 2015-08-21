@@ -1,3 +1,7 @@
-<h2><%= user.escape("name") || user.escape("username") %>'s Reviews</h2>
+<% if (CURRENT_USER.id === user.id) { %>
+  <h2>Your Reviews</h2>
+<% } else { %>
+  <h2><%= user.escape("name") || user.escape("username") %>'s Reviews</h2>
+<% } %>
 <div class="reviews-index">
 </div>

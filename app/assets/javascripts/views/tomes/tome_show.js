@@ -9,9 +9,10 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
     "submit .review-form" : "resetAvgRating"
   },
 
-  initialize: function () {
-    this.listenTo(this.model, "sync", this.render);
+  initialize: function (options) {
+    this.editReview = options.editReview;
 
+    this.listenTo(this.model, "sync", this.render);
     this.listenTo(CURRENT_USER.shelves(), "add", this.addShelfButton);
     this.listenTo(CURRENT_USER.shelves(), "remove", this.removeShelfButton);
     CURRENT_USER.shelves().each(this.addShelfButton.bind(this));
@@ -22,8 +23,14 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
   render: function () {
     var renderedContent = this.template({ tome: this.model });
     this.$el.html(renderedContent);
-    this.attachSubviews();
 
+    this.attachSubviews();
+    this.attachBarrating();
+    this.checkEditReview();
+    return this;
+  },
+
+  attachBarrating: function () {
     this.$('.avg-rating').barrating({
       theme: 'fontawesome-stars',
       initialRating: this.model.get("avg_rating") || 0,
@@ -31,7 +38,13 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
     });
     // Hide the "0" field for empty reviews.
     this.$('.br-widget a[data-rating-value="0"]').css("display", "none");
-    return this;
+  },
+
+  checkEditReview: function () {
+    if (this.editReview) {
+      $(document).scrollTop($("#your-review").offset().top - 70);
+      this.editReview = false;
+    }
   },
 
   toggleButton: function (e) {
@@ -68,7 +81,7 @@ GoodTomes.Views.TomeShow = Backbone.CompositeView.extend ({
   },
 
   attachReviewsIndex: function () {
-    var subview = new GoodTomes.Views.ReviewsIndex({ model: this.model, collection: this.model.reviews() });
+    var subview = new GoodTomes.Views.ReviewsIndex({ model: this.model, collection: this.model.reviews(), editReview: this.editReview });
     this.addSubview('.reviews-wrapper', subview);
   },
 

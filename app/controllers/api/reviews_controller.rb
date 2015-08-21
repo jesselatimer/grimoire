@@ -1,4 +1,10 @@
 class Api::ReviewsController < ApplicationController
+  def index
+    @reviews = Review.all
+    @reviews.sort_by { |review| review.created_at }
+    render :index
+  end
+
   def create
     @review = Review.new(review_params)
     if @review.save

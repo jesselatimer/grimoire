@@ -1,5 +1,5 @@
-GoodTomes.Views.UserReviewShow = Backbone.View.extend ({
-  template: JST["reviews/user_review_show"],
+GoodTomes.Views.ReviewFeedItem = Backbone.View.extend ({
+  template: JST["reviews/review_feed_item"],
   className: "review well",
 
   events: {
@@ -8,12 +8,12 @@ GoodTomes.Views.UserReviewShow = Backbone.View.extend ({
   },
 
   initialize: function (options) {
-    this.user = options.user;
+    this.tomes = options.tomes;
     this.listenTo(this.model, "sync", this.render);
   },
 
   render: function () {
-    var renderedContent = this.template({ review: this.model, user: this.user });
+    var renderedContent = this.template({ review: this.model });
     this.$el.html(renderedContent);
     this.$('.rating').barrating({
       theme: 'fontawesome-stars',
@@ -29,6 +29,7 @@ GoodTomes.Views.UserReviewShow = Backbone.View.extend ({
         this.model.destroy({
           success: function () {
             this.remove();
+            this.tomes.fetch({ reset: true });
           }.bind(this)
         });
       }

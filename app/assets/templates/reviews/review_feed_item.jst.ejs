@@ -1,0 +1,62 @@
+<div class="review-sidebar">
+  <a href="#/users/<%= review.author().id %>">
+    <img
+      src="<%= review.author().escape("image_url") %>"
+      class="thumbnail"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="<%= review.author().escape("username") %>" />
+  </a>
+  <a href="#/tomes/<%= review.tome().id %>" class="sub-image">
+    <img
+      src="<%= review.tome().escape("cover_url") %>"
+      class="thumbnail"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="<%= review.tome().escape("title") %>" />
+  </a>
+</div>
+
+<div class="review-body">
+  <p class="author">
+    <span class="author-text">
+      <!-- Keep </a> tags where they are. Line breaks add a space to the link. -->
+      <a href="#/users/<%= review.author().id %>">
+        <%= review.author().escape("username") %></a>
+      rated
+      <a href="#/tomes/<%= review.tome().id %>">
+        <%= review.tome().escape("title") %></a>
+    </span>
+    <select class="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </p>
+  <p class="title">
+    <%= review.escape("title") %>
+  </p>
+  <p class="review-content">
+    <%= review.escape("body") %>
+  </p>
+  <p class="timestamp">
+    <%= jQuery.timeago(review.escape("created_at")) %>
+  </p>
+</div>
+
+<% if (CURRENT_USER.id === review.author().id) { %>
+<a class="delete-review-button"
+    data-toggle="tooltip"
+    data-placement="top"
+    title="Delete">
+  <i class="fa fa-trash-o"></i>
+</a>
+<a class="edit-review-button"
+    data-toggle="tooltip"
+    data-placement="top"
+    title="Edit">
+  <i class="fa fa-pencil-square-o"></i>
+</a>
+<% } %>
