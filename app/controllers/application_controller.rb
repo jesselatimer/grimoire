@@ -29,6 +29,6 @@ class ApplicationController < ActionController::Base
   private
   # Defined here for use by (API)UsersController and SessionsController
   def user_params
-    params.require(:user).permit(:username, :password, :canon, :bio, :image_url, :name)
+    params.require(:user).permit(:username, :password, :canon, :bio, :image_url, :name, :image600, :image300, :image75)
   end
 end

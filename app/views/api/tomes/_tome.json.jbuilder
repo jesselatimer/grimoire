@@ -1,4 +1,4 @@
-json.(tome, :id, :title, :description, :canon, :cover_url, :author_name)
+json.(tome, :id, :title, :description, :canon, :cover_url, :image600, :image300, :image75, :author_name)
 json.author tome.author, :id, :username if tome.author
 
 num_ratings = tome.reviews.length

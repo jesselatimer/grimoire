@@ -1,6 +1,7 @@
 GoodTomes.Views.ReviewForm = Backbone.View.extend ({
   template: JST["reviews/review_form"],
   tagName: "form",
+  className: "panel-body",
 
   events: {
     "submit" : "createReview"

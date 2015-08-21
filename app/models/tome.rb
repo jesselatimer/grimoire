@@ -11,6 +11,9 @@
 #  author_id   :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  image600    :string
+#  image300    :string
+#  image75     :string
 #
 
 class Tome < ActiveRecord::Base

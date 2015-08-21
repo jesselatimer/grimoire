@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818162731) do
+ActiveRecord::Schema.define(version: 20150821222055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,9 @@ ActiveRecord::Schema.define(version: 20150818162731) do
     t.integer  "author_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image600"
+    t.string   "image300"
+    t.string   "image75"
   end
 
   add_index "tomes", ["author_id"], name: "index_tomes_on_author_id", using: :btree
@@ -72,6 +75,9 @@ ActiveRecord::Schema.define(version: 20150818162731) do
     t.string   "session_token",   null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "image600"
+    t.string   "image300"
+    t.string   "image75"
   end
 
   add_index "users", ["session_token"], name: "index_users_on_session_token", using: :btree
