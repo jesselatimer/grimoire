@@ -28,7 +28,7 @@ body, p, a {
   font-family: 'Roboto', sans-serif;
 }
 
-li, li a {
+li, li a, .btn {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -43,6 +43,7 @@ body {
   background-size: contain, 100% 50%;
   padding-top: 70px;
   padding-bottom: 450px;
+  font-size: 16px;
 }
 
 .clear-fix:after {

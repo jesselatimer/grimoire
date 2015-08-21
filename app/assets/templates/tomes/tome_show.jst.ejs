@@ -21,7 +21,7 @@
   </div>
 </div>
 <div class="content col-sm-8 col-xs-12">
-  <h3 class="title"><%= tome.escape("title") %></h3>
+  <h1 class="title"><%= tome.escape("title") %></h1>
   <p class="author">
     <% if (!tome.author().isEmpty()) { %>
       By <a href="#/users/<%= tome.author().id %>"><%= tome.author().escape("username") %></a> (grimoire author)

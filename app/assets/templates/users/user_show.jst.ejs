@@ -5,12 +5,13 @@
 <% } %>
 <div class="col-sm-4 col-xs-12 tome-sidebar">
   <img src="<%= user.escape("image_url") %>" class="profile-pic" />
-  <h3 class="username"><%= user.escape("username") %></h3>
+  <h2 class="username"><%= user.escape("username") %></h2>
   <h4 class="truename"><%= user.escape("name") || "" %></h4>
   <p class="canon"><%= user.escape("canon") %></p>
   <p class="bio"><%= user.escape("bio") %></p>
 </div>
 <div class="content col-sm-8 col-xs-12 content">
+  <h2><%= user.escape("name") || user.escape("username") %>'s Shelves</h2>
   <div class="shelves"></div>
   <div class="reviews-wrapper"></div>
 </div>
