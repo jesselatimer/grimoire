@@ -1,0 +1,26 @@
+.br-wrapper {
+  display: inline-block;
+}
+
+.br-widget {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2px;
+}
+
+.br-readonly {
+  position: static;
+  margin-left: 5px;
+}
+
+.tome-sidebar .br-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.num-ratings {
+  font-size: 12px;
+  text-align: center;
+}

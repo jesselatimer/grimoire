@@ -1,0 +1,113 @@
+.user-show-wrapper, .tome-show-wrapper, .user-edit-wrapper {
+  min-width: 400px;
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+  // border-radius: 5px;
+  background-color: #F0F0E4;
+  position: relative;
+
+  a {
+    color: #666600;
+  }
+
+  a:hover {
+    color: #382110;
+  }
+
+  img.profile-pic {
+    border: 1px solid gray;
+    width: 100%;
+  }
+
+  .review {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .review:after {
+    content: " ";
+    height: 0px;
+    clear: both;
+    display: block;
+  }
+
+  .review-sidebar {
+    width: 10%;
+    float: left;
+  }
+
+  .review-body {
+    width: 86%;
+    float: right;
+  }
+
+  .timestamp {
+    font-size: smaller;
+    margin-top: 10px;
+    color: lighten(#181818, 40%);
+  }
+
+  .title {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  img.thumbnail {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  img.thumbnail:hover {
+    border: 1px gray solid;
+  }
+
+  .exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    z-index: 5;
+  }
+
+  .exit-button:hover {
+    cursor: pointer;
+  }
+
+  .edit-button {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    font-size: 20px;
+    z-index: 5;
+  }
+
+  .author {
+    font-size: smaller;
+    color: #444;
+    margin-bottom: 10px;
+    margin-top: 5px;
+
+    .author-text {
+      vertical-align: middle;
+    }
+  }
+
+  .truename {
+    margin-top: 5px;
+  }
+
+  .bio {
+    margin-top: 15px;
+  }
+}
+
+.user-show-wrapper:after, .tome-show-wrapper:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+.user-show-wrapper .content {
+  margin-top: 15px;
+}

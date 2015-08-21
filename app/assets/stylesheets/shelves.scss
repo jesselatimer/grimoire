@@ -1,0 +1,71 @@
+.shelves {
+
+  .shelf {
+    margin-bottom: 20px;
+    min-width: 240px;
+
+    .shelf-item {
+      // border: 2px #E3DFC9 solid;
+
+      td {
+        vertical-align: middle;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .shelf-item-content, .shelf-item-image {
+        overflow: hidden;
+      }
+
+      .shelf-item-image {
+        margin-bottom: 0;
+        width: 15%;
+
+        img {
+        }
+      }
+    }
+  }
+}
+
+.shelf-wrapper {
+  clear: left;
+  width: 100%;
+
+  .shelf-button {
+    position: relative;
+
+    .btn {
+      overflow: hidden;
+      display: block;
+      padding: 10px 15px;
+    }
+
+    .add-to-shelf {
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    .add-to-shelf.selected {
+      margin-right: 38px;
+      width: auto;
+      border-radius: 5px 0 0 5px;
+      cursor: default;
+    }
+
+    .remove-from-shelf {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 0 5px 5px 0;
+    }
+
+    .remove-from-shelf.selected {
+      display: block;
+    }
+  }
+}

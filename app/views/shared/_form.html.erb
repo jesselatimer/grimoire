@@ -1,4 +1,11 @@
   <div class="user-form-wrapper">
+    <% if flash["errors"] %>
+      <div class="alert alert-danger">
+          <% flash["errors"].each do |error| %>
+            <p><%= error %></p>
+          <% end %>
+      </div>
+    <% end %>
     <form class="user-form" id="<%= id %>" action="<%= url %>" method="post">
       <%= auth_token %>
 
@@ -6,6 +13,6 @@
 
       <input type="password" class="form-control" name="user[password]" placeholder="Password">
 
-      <input type="submit" value="<%= submit_value %>" class="btn <%= button_class %> full-width">
+      <input type="submit" value="<%= submit_value %>" class="btn <%= button_class %> form-control">
     </form>
   </div>

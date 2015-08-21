@@ -1,0 +1,34 @@
+.delete-review-button, .edit-review-button {
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  z-index: 5;
+}
+.delete-review-button { right: 10px; }
+.edit-review-button { right: 40px; }
+
+.review-form {
+  display: none;
+}
+
+.new-review-button {
+  cursor: pointer;
+}
+
+.new-review-button-wrapper {
+  font-size: smaller;
+}
+
+.form-group {
+  position: relative;
+
+  .title-input {
+    width: calc(100% - 90px);
+    float: right;
+  }
+}
+
+.user-show-wrapper .reviews-wrapper h4 {
+  margin: 0;
+  margin-bottom: 15px;
+}
