@@ -1,2 +1,2 @@
 json.(@review, :id, :title, :body, :rating, :created_at)
-json.author @review.author, :id, :username, :image_url
+json.author @review.author, :id, :username, :image75

@@ -7,6 +7,6 @@ json.num_reviews @user.reviews.length
 unless @user.reviews.empty?
   json.reviews @user.reviews do |review|
     json.(review, :id, :title, :body, :rating, :created_at)
-    json.tome review.tome, :id, :title, :cover_url
+    json.tome review.tome, :id, :title, :image75
   end
 end

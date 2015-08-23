@@ -1,6 +1,6 @@
 <div class="review-sidebar">
   <a href="#/tomes/<%= review.tome().id %>">
-    <img src="<%= review.tome().escape("cover_url") %>" alt="" class="thumbnail" />
+    <img src="<%= review.tome().escape("image75") %>" alt="" class="thumbnail" />
   </a>
 </div>
 
@@ -8,7 +8,7 @@
   <p class="author">
     <span class="author-text">
       <a href="#/tomes/<%= review.tome().id %>">
-        <%= review.tome().escape("title") %></a> 
+        <%= review.tome().escape("title") %></a>
         rated
     </span>
     <select class="rating">

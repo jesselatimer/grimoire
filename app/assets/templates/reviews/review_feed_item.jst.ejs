@@ -1,7 +1,7 @@
 <div class="review-sidebar">
   <a href="#/users/<%= review.author().id %>">
     <img
-      src="<%= review.author().escape("image_url") %>"
+      src="<%= review.author().escape("image75") %>"
       class="thumbnail"
       data-toggle="tooltip"
       data-placement="top"
@@ -9,7 +9,7 @@
   </a>
   <a href="#/tomes/<%= review.tome().id %>" class="sub-image">
     <img
-      src="<%= review.tome().escape("cover_url") %>"
+      src="<%= review.tome().escape("image75") %>"
       class="thumbnail"
       data-toggle="tooltip"
       data-placement="bottom"
