@@ -99,6 +99,9 @@ GoodTomes.Views.ReviewsIndex = Backbone.CompositeView.extend ({
 
   cancelForm: function () {
     this._formView.render();
+    if (this.$('.user-review').is(':empty')) {
+      this.addNewReviewButton();
+    }
     this.collapseReviewForm(this.updateViews.bind(this));
   }
 });
