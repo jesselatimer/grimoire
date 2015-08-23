@@ -81,13 +81,16 @@ GoodTomes.Views.ReviewsIndex = Backbone.CompositeView.extend ({
     this.addSubview('.review-form', this._formView);
   },
 
-  collapseReviewForm: function (callback) {
+  collapseReviewForm: function () {
     this.$('.review-form').css("display", "none");
-    // this.$('.review-form').slideUp(400, callback);
+    var editButton = $('<a class="edit-review-button"><i class="fa fa-pencil-square-o"></i></a>');
+    this.$('.current-user-review').append(editButton);
+    // this.$('.review-form').slideUp(400);
   },
 
   expandReviewForm: function () {
     this.$('.new-review-button-wrapper').remove();
+    this.$('.edit-review-button').remove();
     this.$('.review-form').css("display", "block");
     // this.$('.review-form').slideDown();
   },
@@ -102,6 +105,6 @@ GoodTomes.Views.ReviewsIndex = Backbone.CompositeView.extend ({
     if (this.$('.user-review').is(':empty')) {
       this.addNewReviewButton();
     }
-    this.collapseReviewForm(this.updateViews.bind(this));
+    this.collapseReviewForm();
   }
 });
