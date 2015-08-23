@@ -9,9 +9,13 @@
     <form class="user-form" id="<%= id %>" action="<%= url %>" method="post">
       <%= auth_token %>
 
-      <input type="text" class="form-control" name="user[username]" placeholder="PractitionerName" value="<%= @user && @user.username %>">
+      <input type="text" class="form-control" required pattern="\w+" name="user[username]" placeholder="PractitionerName" value="<%= @user && @user.username %>">
 
-      <input type="password" class="form-control" name="user[password]" placeholder="Password">
+      <input type="password" class="form-control" required pattern="\S{6,}" onchange="form.vpassword.pattern = this.value;" name="user[password]" placeholder="Password">
+
+      <% if id == "user-form" %>
+        <input type="password" name="vpassword" required pattern="\S{6,}" class="form-control" placeholder="Verify Password">
+      <% end %>
 
       <input type="submit" value="<%= submit_value %>" class="btn <%= button_class %> form-control">
     </form>

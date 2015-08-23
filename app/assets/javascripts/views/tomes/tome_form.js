@@ -4,7 +4,8 @@ GoodTomes.Views.TomeForm = Backbone.View.extend ({
 
   events: {
     "click .submit-tome" : "submitHandler",
-    "click .upload-image" : "upload"
+    "click .upload-image" : "upload",
+    "click .cancel-tome" : "cancel"
   },
 
   initialize: function () {
@@ -42,5 +43,13 @@ GoodTomes.Views.TomeForm = Backbone.View.extend ({
         this.$('.cover-image img').attr("src", data.eager[0].url);
       }
     }.bind(this));
+  },
+
+  cancel: function () {
+    if (document.referrer.indexOf(window.location.host) !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '#/tomes';
+    }
   }
 });

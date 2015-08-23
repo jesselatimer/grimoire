@@ -42,6 +42,9 @@ class User < ActiveRecord::Base
 
   def ensure_image_url
     self.image_url ||= "http://i.imgur.com/f25DB.png"
+    self.image600 ||= "http://i.imgur.com/f25DB.png"
+    self.image300 ||= "http://i.imgur.com/f25DB.png"
+    self.image75 ||= "http://i.imgur.com/f25DB.png"
   end
 
   def ensure_bio
