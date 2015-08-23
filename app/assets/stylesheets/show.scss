@@ -1,4 +1,4 @@
-.user-show-wrapper, .tome-show-wrapper, .user-edit-wrapper, .review-feed {
+.user-show-wrapper, .tome-show-wrapper, .user-edit-wrapper, .review-feed, .new-tome-wrapper {
   min-width: 400px;
   width: 90%;
   margin: auto;
@@ -118,4 +118,34 @@
 
 .user-show-wrapper .content {
   margin-top: 15px;
+}
+
+.edit-user-form, .tome-form {
+  .form-control {
+    width: 65%;
+  }
+
+  .profile-image, .cover-image {
+    float: right;
+    width: 30%;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 250px;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .upload-image {
+      z-index: 10;
+      position: relative;
+    }
+  }
+
+  #bio, #description {
+    height: 200px;
+    resize:vertical;
+    // max-width: 65%;
+  }
 }

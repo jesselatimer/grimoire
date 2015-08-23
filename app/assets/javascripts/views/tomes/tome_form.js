@@ -1,9 +1,9 @@
 GoodTomes.Views.TomeForm = Backbone.View.extend ({
   template: JST["tomes/tome_form"],
-  class: "form-wrapper",
+  className: "new-tome-wrapper",
 
   events: {
-    "click .submit" : "submitHandler",
+    "click .submit-tome" : "submitHandler",
     "click .upload-image" : "upload"
   },
 
@@ -33,13 +33,14 @@ GoodTomes.Views.TomeForm = Backbone.View.extend ({
   upload: function (e) {
     e.preventDefault();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
-      var data = result[0];
-      this.model.set({
-        cover_url: data.url,
-        image600: data.eager[1].url,
-        image300: data.eager[0].url,
-        image75: data.eager[2].url
-      });
+      if (result[0]) {
+        var data = result[0];
+        this.$('input[name="tome[cover_url]"]').val(data.url);
+        this.$('input[name="tome[image600]"]').val(data.eager[1].url);
+        this.$('input[name="tome[image300]"]').val(data.eager[0].url);
+        this.$('input[name="tome[image75]"]').val(data.eager[2].url);
+        this.$('.cover-image img').attr("src", data.eager[0].url);
+      }
     }.bind(this));
   }
 });

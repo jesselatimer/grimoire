@@ -1,9 +1,34 @@
-<form class="tome-form">
-  <input type="text" name="tome[title]" value="<%= tome.escape("title") %>" placeholder="Title">
-  <input type="text" name="tome[canon]" value="<%= tome.escape("canon") %>" placeholder="Source Canon">
-  <textarea name="tome[description]" placeholder="Tome description"><%= tome.escape("description") %></textarea>
-  <input type="text" name="tome[cover_url]" value="<%= tome.escape("cover_url") %>" placeholder="Cover Image URL">
+<h1>Add a New Grimoire</h1>
 
-  <button type="button" class="btn btn-default upload-image">Set Tome Cover</button>
-  <input type="submit" value="Submit" class="submit">
+<form class="tome-form clear-fix">
+
+  <div class="cover-image">
+    <img src="<%= tome.escape("image300") %>" />
+    <br>
+    <input type="hidden" name="tome[cover_url]" value="<%= tome.escape("cover_url") %>">
+    <input type="hidden" name="tome[image600]" value="<%= tome.escape("image600") %>">
+    <input type="hidden" name="tome[image300]" value="<%= tome.escape("image300") %>">
+    <input type="hidden" name="tome[image75]" value="<%= tome.escape("image75") %>">
+    <button type="button" class="btn btn-default upload-image">Set Cover Image</button>
+  </div>
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input id="title" class="form-control" type="text" name="tome[title]" value="<%= tome.escape("title") %>" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <label for="author_name">Author Name</label>
+    <input id="author_name" class="form-control" type="text" author_name="tome[author_name]" value="<%= tome.escape("author_name") %>" placeholder="Author Name">
+  </div>
+  <div class="form-group">
+    <label for="canon">Canon</label>
+    <input id="canon" class="form-control" type="text" name="tome[canon]" value="<%= tome.escape("canon") %>" placeholder="Canon (e.g. Harry Potter, The Cthulhu Mythos, etc.)">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea id="description" class="form-control" name="tome[description]" placeholder="Short description."><%= tome.escape("description") %></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-default submit-tome">Save Grimoire</button>
+  <button type="button" class="btn btn-danger cancel-tome">Cancel</button>
 </form>

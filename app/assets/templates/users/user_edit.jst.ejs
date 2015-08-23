@@ -1,24 +1,32 @@
 <h1>Edit Your Profile</h1>
 
-<form class="edit-user-form">
+<form class="edit-user-form clear-fix">
+  <div class="profile-image">
+    <img src="<%= user.escape("image300") %>" />
+    <br>
+    <input type="hidden" name="user[image_url]" value="<%= user.escape("image_url") %>">
+    <input type="hidden" name="user[image600]" value="<%= user.escape("image600") %>">
+    <input type="hidden" name="user[image300]" value="<%= user.escape("image300") %>">
+    <input type="hidden" name="user[image75]" value="<%= user.escape("image75") %>">
+    <button type="button" class="btn btn-default upload-image">Set User Image</button>
+  </div>
+
   <div class="form-group">
     <label for="username">Practitioner Name</label>
-    <input class="form-control" type="text" name="user[username]" value="<%= user.escape("username") %>" placeholder="Practitioner Name">
+    <input id="username" class="form-control" type="text" name="user[username]" value="<%= user.escape("username") %>" placeholder="Practitioner Name">
   </div>
   <div class="form-group">
     <label for="name">Full Name</label>
-    <input class="form-control" type="text" name="user[name]" value="<%= user.escape("name") %>" placeholder="Full Name">
+    <input id="name" class="form-control" type="text" name="user[name]" value="<%= user.escape("name") %>" placeholder="Full Name">
   </div>
   <div class="form-group">
     <label for="canon">Canon</label>
-    <input class="form-control" type="text" name="user[canon]" value="<%= user.escape("canon") %>" placeholder="Canon (e.g. Harry Potter, The Cthulhu Mythos, etc.)">
+    <input id="canon" class="form-control" type="text" name="user[canon]" value="<%= user.escape("canon") %>" placeholder="Canon (e.g. Harry Potter, The Cthulhu Mythos, etc.)">
   </div>
   <div class="form-group">
     <label for="bio">Bio</label>
-    <textarea class="form-control" name="user[bio]" placeholder="Short description of you."><%= user.escape("bio") %></textarea>
+    <textarea id="bio" class="form-control" name="user[bio]" placeholder="Short description of you."><%= user.escape("bio") %></textarea>
   </div>
-
-  <button type="button" class="btn btn-default upload-image">Set User Image</button>
 
   <button type="submit" class="btn btn-default submit-edits">Save Profile</button>
   <button type="button" class="btn btn-danger cancel-edits">Cancel Edits</button>
