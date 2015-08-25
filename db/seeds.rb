@@ -1,118 +1,156 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Tome.create([
-  {
-    title: "The Necronomicon",
-    canon: "The Cthulhu Mythos by H.P. Lovecraft",
-    author_id: 2,
-    author_name: "The Mad Arab",
-    description: 'The Necronomicon is a fictional grimoire (textbook of magic) appearing in the stories by horror writer H. P. Lovecraft and his followers. It was first mentioned in Lovecraft\'s 1924 short story "The Hound",[1] written in 1922, though its purported author, the "Mad Arab" Abdul Alhazred, had been quoted a year earlier in Lovecraft\'s "The Nameless City".[2] Among other things, the work contains an account of the Old Ones, their history, and the means for summoning them.',
-    cover_url: "http://orig04.deviantart.net/fc4c/f/2013/348/e/8/e8f395694618a4221c6823e02a408b29-d6xx05l.jpg"
-  },
-  {
-    title: "The Grimmerie",
-    canon: "The Wicked Years by Gregory Maguire",
-    description: "The Grimmerie contains information on various supernatural creatures, including angels and an entire section on \"Evil Particulars\" (i.e. demons), methods of poisoning water and breeding a docile population, as well as diagrams of instruments of torture and weapons which Elphaba considers \"too vile to use\".",
-    cover_url: "http://i.imgur.com/x966Daw.jpg"
-  },
-  {
-    title: "The Enchiridion",
-    canon: "Adventure Time by Pendleton Ward",
-    author_name: "unknown",
-    description: "The Enchiridion (which translates to \"The Handbook\" or \"The Manual\") was an ancient book with codes of conduct, guidelines, and other helpful information for heroes. The book had great power which allowed it to tear open worm holes between dimensions in the multiverse. It was broken into pieces after turning to stone by Finn in \"The Lich\" in order to stop the Lich from gaining access to the multiverse, but, as it turned out, by doing this Finn made the portal to the multiverse.",
-    cover_url: "http://i.ytimg.com/vi/0Mry--ppkFM/maxresdefault.jpg"
-  },
-  {
-    title: "Fantastic Beasts and Where to Find Them",
-    canon: "Harry Potter by J.K. Rowling",
-    author_name: "Newt Scamander",
-    description: 'Fantastic Beasts and Where to Find Them contains the history of Magizoology and describes 85 magical species found around the world. Scamander says that he collected most of the information found in the book through observations made over years of travel and across five continents. He notes that the first edition was commissioned in 1918 by Mr Augustus Worme of Obscurus Books. However, it was not published until 1927. It is now in its 52nd edition.',
-    cover_url: "http://media.comicbook.com/wp-content/uploads/2013/09/harry-potter-spinoff-movie-fantastic-beasts-and-where-to-find-them.jpg"
-  },
-  {
-    title: "There and Back Again",
-    canon: "Lord of the Rings by J.R.R. Tolkien",
-    author_name: "Bilbo Baggins",
-    description: 'Set in a time "Between the Dawn of Færie and the Dominion of Men",[1] The Hobbit follows the quest of home-loving hobbit Bilbo Baggins to win a share of the treasure guarded by the dragon, Smaug. Bilbo\'s journey takes him from light-hearted, rural surroundings into more sinister territory.[2] The story is told in the form of an episodic quest, and most chapters introduce a specific creature, or type of creature, of Tolkien\'s Wilderland. By accepting the disreputable, romantic, fey and adventurous sides of his nature and applying his wits and common sense, Bilbo gains a new level of maturity, competence and wisdom.[3] The story reaches its climax in the Battle of the Five Armies, where many of the characters and creatures from earlier chapters re-emerge to engage in conflict.',
-    cover_url: "http://www.collecttolkien.com/images/Books/Book%20Journal%20LOTR%20There%20Back%20Again.jpg"
-  },
-  {
-    title: "De Vermis Mysteriis",
-    canon: "The Shambler from the Stars by Robert Bloch",
-    description: 'The work of Ludwig Prinn, an "alchemist, necromancer, [and] reputed mage" who "boasted of having attained a miraculous age" before being burned at the stake in Brussels during the height of the witch trials (in the late 15th or early 16th centuries).',
-    cover_url: "http://40.media.tumblr.com/tumblr_lcf2srvV2r1qzlngto1_1280.jpg"
-  },
-  {
-    title: "Secrets of the Darkest Art",
-    canon: "Harry Potter by J.K. Rowling",
-    description: "Secrets of the Darkest Art is a tome, possibly of medieval origin, that discusses Dark Arts. It is the only known source of written instructions on the creation and destruction of a Horcrux.",
-    cover_url: "http://www.fybertech.com/4thread/x_9477189/1328657193915.png"
-  }
+Tome.create!([
+  {id: 24, title: "Defensive Magical Theory", description: "Chapter One: \"Basics for Beginners\"(page 5), Chapter Two: \"Common Defensive Theories and their Derivation\" (page 19), Chapter Three: \"The Case for Non-Offensive Responses to Magical Attack\" (page 34), \r\nChapter Thirty-four: \"Non-Retaliation and Negotiation\"", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440451669/u0bewf7vz9mpmnrwtpuu.jpg", canon: "Harry Potter by J.K. Rowling", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440451669/u0bewf7vz9mpmnrwtpuu.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440451669/u0bewf7vz9mpmnrwtpuu.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440451669/u0bewf7vz9mpmnrwtpuu.jpg"},
+  {id: 25, title: "The History and Practice of English Magic", description: "The History and Practice of English Magic is a book by Jonathan Strange, published in 1816 by John Murray. Not much is known about it unluckily as almost all copies fell victim to a campaign by Gilbert Norrell to suppress it by magical means[50]. (Mr. Norrell's interference with this publication - not only irregular but perhaps illegal - was of course driven by his usual misgivings about releasing knowledge of magic to the public at large.) It can be assumed however, as the title suggests, that it is an attempt to describe all of English magic, containing mostly Strangite views. All that we are told of the book are the various quotes which appear in the footnotes of Jonathan Strange & Mr Norrell, and its Prologue, a piece of which is published as Chapter 45 of Miss Clarke's history.", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440452082/k6sluslamnswmkhgalyl.jpg", canon: "Jonathan Strange & Mr Norrell by Susanna Clarke", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440452082/k6sluslamnswmkhgalyl.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440452082/k6sluslamnswmkhgalyl.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440452082/k6sluslamnswmkhgalyl.jpg"},
+  {id: 26, title: "Ninjas of the Ice", description: "Ninjas of the Ice: The Art of Fridjitzu is a text that is kept inside a secret sanctum inside the Ice King's castle. Ice King owns the first edition. It is a manual that teaches several ice or any kind of snow based attacks, most used to create hand weapons from ice.", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440452275/p7rxuz6b8cbml6bpeyar.jpg", canon: "Adventure Time by Pendleton Ward", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440452275/p7rxuz6b8cbml6bpeyar.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440452275/p7rxuz6b8cbml6bpeyar.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440452275/p7rxuz6b8cbml6bpeyar.jpg"},
+  {id: 27, title: "Tome of Eternal Darkness", description: "Created by the ancient Mantorok, the Tome of Eternal Darkness is bound in human skin and decorated in shrunken bones. The Mantorok Rune is carved into the Tome's clasp. The Tome and its separated pages are written in a maddening, indecipherable scrawl. Only a select few are able to read it: no amount of cryptography or magick can decode it. These few are able to read the Tome regardless of their native language or their literacy level. Ellia, as a slave, is almost certainly illiterate and can still read it.", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440452702/vevhgv8nkdfpprbwtawk.jpg", canon: "Eternal Darkness: Sanity's Requiem by Silicon Knights", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440452702/vevhgv8nkdfpprbwtawk.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440452702/vevhgv8nkdfpprbwtawk.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440452702/vevhgv8nkdfpprbwtawk.jpg"},
+  {id: 15, title: "The Necronomicon", description: " Necronomicon of Alhazred, (literally: \"Book of Dead Names\") is not, as is popularly believed, a grimoire, or sorcerer's spell-book. It was conceived as a history, and hence \"a book of things now dead and gone\". An alternative derivation of the word Necronomicon gives as its meaning \"the book of the customs of the dead\", but again this is consistent with the book's original conception as a history, not as a work of necromancy.\r\n\r\nThe author of the book shared with Madame Blavatsky a magpie-like tendency to garner and stitch together fact, rumour, speculation, and complete balderdash, and the result is a vast and almost unreadable compendium of near-nonsense which bears more than a superficial resemblance to Blavatsky's The Secret Doctrine.\r\n\r\nIn times past the book has been referred to guardedly as Al Azif , and also The Book of the Arab. Azif is a word the Arabs use to refer to nocturnal insects, but it is also a reference to the howling of demons (Djinn). The Necronomicon was written in seven volumes, and runs to over 900 pages in the Latin edition.", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440448001/qiekf9h22ad0i9lojkv3.jpg", canon: "The Cthulhu Mythos by H.P. Lovecraft", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440448001/qiekf9h22ad0i9lojkv3.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440448001/qiekf9h22ad0i9lojkv3.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440448001/qiekf9h22ad0i9lojkv3.jpg"},
+  {id: 16, title: "The Grimmerie", description: "The Grimmerie contains information on various supernatural creatures, including angels and an entire section on \"Evil Particulars\" (i.e. demons), methods of poisoning water and breeding a docile population, as well as diagrams of instruments of torture and weapons which many consider too vile to use.", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440448098/kvco1tzam6t14fjdwytt.jpg", canon: "The Wicked Years by Gregory Maguire", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440448098/kvco1tzam6t14fjdwytt.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440448098/kvco1tzam6t14fjdwytt.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440448098/kvco1tzam6t14fjdwytt.jpg"},
+  {id: 17, title: "The Enchiridion", description: "The Enchiridion (which translates to \"The Handbook\" or \"The Manual\") was an ancient book with codes of conduct, guidelines, and other helpful information for heroes. The book had great power which allowed it to tear open worm holes between dimensions in the multiverse. It was broken into pieces after turning to stone by Finn in \"The Lich\" in order to stop the Lich from gaining access to the multiverse, but, as it turned out, by doing this Finn made the portal to the multiverse.", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440448177/xht189tliqyk3svdbth4.jpg", canon: "Adventure Time by Pendleton Ward", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440448177/xht189tliqyk3svdbth4.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440448177/xht189tliqyk3svdbth4.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440448177/xht189tliqyk3svdbth4.jpg"},
+  {id: 18, title: "Fantastic Beasts and Where to Find Them", description: "Fantastic Beasts and Where to Find Them contains the history of Magizoology and describes 85 magical species found around the world. Scamander says that he collected most of the information found in the book through observations made over years of travel and across five continents. He notes that the first edition was commissioned in 1918 by Mr Augustus Worme of Obscurus Books. However, it was not published until 1927. It is now in its 52nd edition.", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440448266/w0nnuaapf1z1l7szlr83.jpg", canon: "Harry Potter by J.K. Rowling", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440448266/w0nnuaapf1z1l7szlr83.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440448266/w0nnuaapf1z1l7szlr83.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440448266/w0nnuaapf1z1l7szlr83.jpg"},
+  {id: 19, title: "De Vermis Mysteriis", description: "The work of Ludwig Prinn, an \"alchemist, necromancer, [and] reputed mage\" who \"boasted of having attained a miraculous age\" before being burned at the stake in Brussels during the height of the witch trials (in the late 15th or early 16th centuries).", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440448317/tmqh4ljmdahryry4wxga.jpg", canon: "The Shambler from the Stars by Robert Bloch", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440448317/tmqh4ljmdahryry4wxga.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440448317/tmqh4ljmdahryry4wxga.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440448317/tmqh4ljmdahryry4wxga.jpg"},
+  {id: 20, title: "Secrets of the Darkest Art", description: "Secrets of the Darkest Art is a tome, possibly of medieval origin, that discusses Dark Arts. It is the only known source of written instructions on the creation and destruction of a Horcrux.", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440448355/xmyhosim4zfttlch6yh8.png", canon: "Harry Potter by J.K. Rowling", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440448355/xmyhosim4zfttlch6yh8.png", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440448355/xmyhosim4zfttlch6yh8.png", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440448355/xmyhosim4zfttlch6yh8.png"},
+  {id: 22, title: "The Pergamum Codex", description: "\"This is the Pergamum Codex. There is nothing in it that does not come to pass.\"", cover_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440450499/plj2iv5lq1imxnekn9fh.jpg", canon: "Buffy the Vampire Slayer by Joss Whedon", author_name: nil, author_id: nil, image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440450499/plj2iv5lq1imxnekn9fh.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440450499/plj2iv5lq1imxnekn9fh.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440450499/plj2iv5lq1imxnekn9fh.jpg"}
 ])
 
-User.create([
-  {
-    password: "password",
-    username: "boywholived",
-    name: "Harry Potter",
-    canon: "Harry Potter by J.K. Rowling",
-    bio: "I defeated the Dark Lord Voldemort when I was a baby!",
-    image_url: "http://inspirationfeed.com/wp-content/uploads/2011/07/size500_harrypotter_jakeparker_harrypotter_detail11.jpg"
-  },
-  {
-    password: "password",
-    username: "TheWorshipper",
-    name: "Abdul Alhazred",
-    canon: "The Cthulhu Mythos by H.P. Lovecraft",
-    bio: 'A mad poet of Sanaá, in Yemen, who is said to have flourished during the period of the Ommiade caliphs, circa 700 A.D. He visited the ruins of Babylon and the subterranean secret of Memphis and spent ten years alone in the great southern desert of Arabia—the Roba El Khaliyeh or "Empty Space" of the ancients—and "Dahna" or "Crimson" desert of the modern Arabs, which is held to be inhabited by protective evil spirits and monsters of death. Of this desert many strange and unbelievable marvels are told by those who pretend to have penetrated it. In his last years Alhazred dwelt in Damascus.',
-    image_url: "http://orig10.deviantart.net/26bf/f/2013/304/7/3/abdul_from_sanaa_by_noldofinve-d6s1mdm.jpg"
-  },
-  {
-    password: "password",
-    username: "Myrddin",
-    name: "Merlin Ambrosius",
-    canon: "Arthurian legend",
-    bio: "Merlin is a legendary figure best known as the wizard featured in Arthurian legend. The standard depiction of the character first appears in Geoffrey of Monmouth's Historia Regum Britanniae, written c. 1136, and is based on an amalgamation of previous historical and legendary figures. Geoffrey combined existing stories of Myrddin Wyllt (Merlinus Caledonensis), a North Brythonic prophet and madman with no connection to King Arthur, with tales of the Romano-British war leader Ambrosius Aurelianus to form the composite figure he called Merlin Ambrosius (Welsh: Myrddin Emrys). He is allegedly buried in the Broceliande forest, near Paimpont in Brittany.",
-    image_url: "http://www.alanguilan.com/museum/redondo11.jpg"
-  },
-  {
-    password: "password",
-    username: "iheartprincesses",
-    name: "The Ice King",
-    canon: "Adventure Time by Pendleton Ward",
-    bio: '"What do you think, Finn? Can we pull back the veil of static and reach in to the source of all being? Behind this curtain of patterns, this random pattern generator. So clever. Right here in every home, watching us from a one-sided mirror."',
-    image_url: "http://orig05.deviantart.net/c3f6/f/2012/187/9/1/ice_king_by_devastis-d56704p.png"
-  },
-  {
-    password: "password",
-    username: "natureguy",
-    name: "Radagast the Brown",
-    canon: "Middle-earth by J.R.R. Tolkien",
-    bio: 'Radagast the Brown is a fictional character in J. R. R. Tolkien\'s Middle-earth legendarium. He is one of the Istari, also known as "Wizards", who were sent by the angelic Valar to aid the Elves and Men of Middle-earth in their struggle against the Dark Lord Sauron. Radagast appears in The Lord of the Rings and Unfinished Tales, and is mentioned in The Hobbit and The Silmarillion.',
-    image_url: "http://pre11.deviantart.net/abd8/th/pre/i/2013/004/7/f/radagast_the_brown_by_angelabermudez-d5qes4o.jpg"
-  },
-  {
-    password: "password",
-    username: "wickedwitch",
-    name: "Elphaba",
-    canon: "The Wicked Years by Gregory Maguire",
-    bio: 'In the original L. Frank Baum book The Wonderful Wizard of Oz, the Wicked Witch of the West is unnamed and little is explained about her life. Elphaba is modeled after the Witch portrayed by Margaret Hamilton in the classic 1939 film The Wizard of Oz: green-skinned, clad entirely in black and wearing a tall peaked hat. Maguire formulated the name "Elphaba" from the phonetic pronunciation of Baum\'s initials L.F.B. In both adaptations, Elphaba is also called by several nicknames including Elphie, Fabala, Sister (Saint) Aelphaba, Auntie Witch, and Fae.',
-    image_url: "http://www.galindaswardrobe.com/pictures/Elphaba/84.jpg"
-  },
-  {
-    password: "password",
-    username: "shrouded_in_mystery"
-  }
+User.create!([
+  {id: 24, password: "password", username: "ScoobyWitch", name: "Willow Rosenberg", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440449118/xsaxzljct6ka4j7i27hx.jpg", canon: "Buff the Vampire Slayer by Joss Whedon", bio: "\"I said I wanted to understand my power and I do. But under that, I wanted to know my fate. Darkness? Enlightenment? Was I a good witch or a bad witch? I feel the pull of both of each. That was my secret motive ... but it's not. Under the under, I just wanted her. She was my light. She was my order. She was my journey. Completed. But either she's an illusion ... or Tara is at peace. And either way, no thanks.\"", password_digest: "$2a$10$is0QsgGG52VZfOfUpsrxWeTfkMuA7Oma27RjQYMOSYMksrOI/2J3K", session_token: "sYScR8mgaT-VsZTi7gJVfQ", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440449118/xsaxzljct6ka4j7i27hx.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440449118/xsaxzljct6ka4j7i27hx.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440449118/xsaxzljct6ka4j7i27hx.jpg"},
+  {id: 23, password: "password", username: "instarlight", name: "Professor Quirrell", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440443044/dpvquh9ng5t4njtmtwvc.jpg", canon: "Harry Potter and the Methods of Rationality by Eliezer Yudkowsky", bio: "\"Sometimes,\" Professor Quirrell said in a voice so quiet it almost wasn't there, \"when this flawed world seems unusually hateful, I wonder whether there might be some other place, far away, where I should have been. I cannot seem to imagine what that place might be, and if I can't even imagine it then how can I believe it exists? And yet the universe is so very, very wide, and perhaps it might exist anyway? But the stars are so very, very far away. It would take a long, long time to get there, even if I knew the way. And I wonder what I would dream about, if I slept for a long, long time...\"", password_digest: "$2a$10$.H.T2LtdkU1yTS6rMZgQNuseioxi/g8NscL6cj9nercDus0R3yAQ2", session_token: "X1kRrS2DkvUuC5lecexskg", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440443044/dpvquh9ng5t4njtmtwvc.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440443044/dpvquh9ng5t4njtmtwvc.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440443044/dpvquh9ng5t4njtmtwvc.jpg"},
+  {id: 12, password: "password", username: "boywholived", name: "Harry James Potter", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440437934/rn4pavxxrbblshvuzuh5.jpg", canon: "Harry Potter by J.K. Rowling", bio: "Sir, you gotta help me. I just ran away from home from my mean aunt and uncle. They keep me under some stairs. Listen, you've gotta believe me. I got this letter from Hogwarts School Of Witchcraft and Wizardry. Sir, listen, please! A bird gave it to me!\r\n", password_digest: "$2a$10$OQ65fLeQwyPK78TjtFhZs.x4qA6vOiOIZGWFUWkFdOPODqY./4SUG", session_token: "MF1flerbvhucIJ1y1WS2bg", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440437934/rn4pavxxrbblshvuzuh5.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440437934/rn4pavxxrbblshvuzuh5.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440437934/rn4pavxxrbblshvuzuh5.jpg"},
+  {id: 13, password: "password", username: "ServantoftheGreatLord", name: "Abdul Alhazred", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440438227/yqw4hurag19j1mzn54lk.jpg", canon: "The Cthulhu Mythos by H.P. Lovecraft", bio: "A mad poet of Sanaá, in Yemen, it has been said I flourished during the period of the Ommiade caliphs, circa 700 A.D. I visited the ruins of Babylon and the subterranean secret of Memphis and spent ten years alone in the great southern desert of Arabia—the Roba El Khaliyeh or \"Empty Space\" of the ancients—and \"Dahna\" or \"Crimson\" desert of the modern Arabs, which is held to be inhabited by protective evil spirits and monsters of death. Of this desert many strange and unbelievable marvels are told by those who pretend to have penetrated it. In my last years I dwelt in Damascus.", password_digest: "$2a$10$1nQKK0/eea/D6re3TetXqOnVWtKtv0xpQK8NelQtg0l/d97qNwa0K", session_token: "LtmRv-5Rt-VzRyUeMhEIwg", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440438227/yqw4hurag19j1mzn54lk.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440438227/yqw4hurag19j1mzn54lk.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440438227/yqw4hurag19j1mzn54lk.jpg"},
+  {id: 15, password: "password", username: "iheartprincesses", name: "The Ice King", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440439608/rltzqc6vfylpzp5adr1y.png", canon: "Adventure Time by Pendleton Ward", bio: "\"What do you think, Finn? Can we pull back the veil of static and reach in to the source of all being? Behind this curtain of patterns, this random pattern generator. So clever. Right here in every home, watching us from a one-sided mirror.\"", password_digest: "$2a$10$coeHybsfw0qOmmWChGDikernhlSPI/D8lKqT28GQjZ/yZpMlJFMm6", session_token: "psLWEfCaQ71MAdT_of6J8A", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440439608/rltzqc6vfylpzp5adr1y.png", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440439608/rltzqc6vfylpzp5adr1y.png", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440439608/rltzqc6vfylpzp5adr1y.png"},
+  {id: 14, password: "password", username: "Myrddin", name: "Merlin Ambrosius", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440439430/zafjq01qdxnbm7nex4da.jpg", canon: "Arthurian legend", bio: "“I think too many people presume to read the divine Scriptures and fall into such terrors as this,' said Patricius sternly. 'Those who presume on their learning will learn, I trust, to listen to their priests for the true interpretations.'\r\n\r\nThe Merlin smiled gently. 'I cannot join you in that wish, brother. I am dedicated to the belief that it is God's will that all men should strive for wisdom in themselves, not look to it from some other. Babes, perhaps, must have their food chewed for them by a nurse, but men may drink and eat of wisdom for themselves.” ", password_digest: "$2a$10$0VJddO6rEgwVR/aODaNkTepfgSLtI/zTaZ/nFsRU86e71xj5C/wY.", session_token: "YbV5VKxUXUVNxR1OGn64Ig", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440439430/zafjq01qdxnbm7nex4da.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440439430/zafjq01qdxnbm7nex4da.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440439430/zafjq01qdxnbm7nex4da.jpg"},
+  {id: 16, password: "password", username: "natureguy", name: "Radagast the Brown", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440440020/i6j4hpe5xnd8itzula9m.jpg", canon: "Middle-earth by J.R.R. Tolkien", bio: "I was originally a Maia of Yavanna the Fruit-Giver named Aiwendil, meaning \"bird-friend\". I was chosen as one of the Istari who came to Middle-earth in the year TA 1000. Aiwendil, renamed Radagast, meaning \"tender of beasts\", by the Noldor, protects the great forests. I am little concerned with the affairs of Men and Elves but am far more knowledgeable in plants, birds and beasts in the forest.", password_digest: "$2a$10$53rvqpJNXfUot67E/feH1uQXdJMnkYQsG5pubeg7VgexQBuClGIPW", session_token: "HHw1L2dVIjnr8Bb6IQGjxQ", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440440020/i6j4hpe5xnd8itzula9m.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440440020/i6j4hpe5xnd8itzula9m.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440440020/i6j4hpe5xnd8itzula9m.jpg"},
+  {id: 20, password: "password", username: "Mithrandir", name: "Gandalf the Grey", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440441595/kzycagqb8et3otwo9oq5.jpg", canon: "Middle-earth by J.R.R. Tolkien", bio: "\"He wore a tall pointed grey hat, a long grey cloak, and a silver scarf. He had a long white beard and bushy eyebrows that stuck out beyond the brim of his hat.\"", password_digest: "$2a$10$5vs71XHTaBmTJNNtFeHQEO3jK74MHZL8X3yvo8N0EgChwgvkyS9qe", session_token: "FLmT7Mkg29m3vIZl8qRuNg", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440441595/kzycagqb8et3otwo9oq5.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440441595/kzycagqb8et3otwo9oq5.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440441595/kzycagqb8et3otwo9oq5.jpg"},
+  {id: 21, password: "password", username: "withoutmercy", name: "The Grand High Witch", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440442274/niyw6rszzgwtnzozroel.jpg", canon: "The Witches by Roald Dahl", bio: "Witches of England... You are a disgrace! Miserable witches... You are good-for-nothing worms! Everywhere I look, I see the repulsive sight of hundreds, thousands of revolting little children... I ask you!", password_digest: "$2a$10$o/MTrworTvSNPSPKdWoDG.YsQBiJsENbmWunHA3OBy.4EupJ9z3Cm", session_token: "lWF_Nf5FbLl0KDcr8zinLw", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440442274/niyw6rszzgwtnzozroel.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440442274/niyw6rszzgwtnzozroel.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440442274/niyw6rszzgwtnzozroel.jpg"},
+  {id: 19, password: "password", username: "dumbledore", name: "Albus Percival Wulfric Brian Dumbledore", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440441329/nlsy8wzwtbskwq5olswz.png", canon: "Harry Potter by J.K. Rowling", bio: "\"Why? \" Dumbledore repeated. \"Ah, Harry, if I went around all day asking why I do things, I'd never have time to get a single thing done! I'm quite a busy person, you know.\"", password_digest: "$2a$10$EVvkhTMqOEnlEPcPQRYE1e5f4Dd4vpY0Sa1hnAK/Zlukl9YNopGtO", session_token: "DmNFkbapfcJiD5tMBmMAqw", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440441329/nlsy8wzwtbskwq5olswz.png", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440441329/nlsy8wzwtbskwq5olswz.png", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440441329/nlsy8wzwtbskwq5olswz.png"},
+  {id: 17, password: "password", username: "wickedwitch", name: "Elphaba", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440440192/wpxja4juc7tzdcqhtdqn.jpg", canon: "The Wicked Years by Gregory Maguire", bio: "\"People always did like to talk, didn't they? That's why I call myself a witch now: the Wicked Witch of the West, if you want the full glory of it. As long as people are going to call you a lunatic anyway, why not get the benefit of it? It liberates you from convention.\"", password_digest: "$2a$10$pMVW7pGqrM5tLBsJiGDJLu5Nln6vHa26YXGyYLdx9hKfzI6xvT1oW", session_token: "gnPdo5IH9RLcU2BqWdrwZQ", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440440192/wpxja4juc7tzdcqhtdqn.jpg", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440440192/wpxja4juc7tzdcqhtdqn.jpg", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440440192/wpxja4juc7tzdcqhtdqn.jpg"},
+  {id: 18, password: "password", username: "bonylegs", name: "Baba Yaga", image_url: "http://res.cloudinary.com/dybv49bau/image/upload/v1440440458/zchdn9l5ji03jgk8gwtu.png", canon: "Slavic folklore", bio: "He journeyed onwards, straight ahead and finally came to a little hut; it stood in the open field, turning on chicken legs. He entered and found Baba Yaga the Bony-legged. \"Fie, fie,\" she said, \"the Russian smell was never heard of nor caught sight of here, but it has come by itself. Are you here of your own free will or by compulsion, my good youth?\" \"Largely of my own free will, and twice as much by compulsion! Do you know, Baba Yaga, where lies the thrice tenth kingdom?\" \"No, I do not,\" she said, and told him to go to her second sister; she might know.", password_digest: "$2a$10$WW9yZ3j3.2dIrM0vxRSSYu48EktrLk9pZqEAyeFPy67.V1wAUzOm.", session_token: "duO7Jun-Yzcc8vLyukD8KA", image600: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1440440458/zchdn9l5ji03jgk8gwtu.png", image300: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1440440458/zchdn9l5ji03jgk8gwtu.png", image75: "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1440440458/zchdn9l5ji03jgk8gwtu.png"}
 ])
 
-User.all.each do |user|
-  user.shelves.create!(title: "Mastered")
-  user.shelves.create!(title: "Currently Studying")
-  user.shelves.create!(title: "Wish to Study")
+Review.create!([
+  {author_id: 24, tome_id: 22, title: "The most accurate set of prophecies I've encountered", body: "Eerily accurate, from foretelling the rise of the Master in Sunnydale to the death of the Slayer at his hands (sorry, Buff!). Minus one star because it's written in Latin through numerous demonic languages. Think a Google translate chain, but without any convenient dictionaries. Accurately telling the future is no good if no one can read it.", rating: 4},
+  {author_id: 24, tome_id: 27, title: "Check to Eternal and Darkness", body: "A while back I went on a bit of a magical rampage and ended up absorbing a lot of dark tomes no Wiccan in her right mind should know. (Lay off the magicks, kids!) Anyway, this was among them, and while I found it definitely lacking in practical know-how, it made up for it by being a gateway to a horror-realm fueled by the dark deaths of an entire family line.", rating: 3},
+  {author_id: 24, tome_id: 25, title: "Mr. Strange is the guy!", body: "I love this book! It lays out the practice of magic in Britain in a very elegant and straightforward way. A lot of it doesn't exactly match what I was taught by the coven I studied with there, but I suspect Mr. Strange was a bit more academically rigorous. He sounds like Giles!", rating: 5},
+  {author_id: 23, tome_id: 24, title: "Do Not Read", body: "The single most asinine and hateful book to desecrate Britain's bookshelves. No more than I would expect from a Ministry shill. Godric Gryffindor and Salazar Slytherin would find common ground in removing this waste from the world.", rating: 1},
+  {author_id: 23, tome_id: 20, title: "An Excellent Start", body: "One must be careful when pursuing the creation of something as stigmatized as a Horcrux, but should one wish to do so, this book is an excellent starting point. I find its author disappointingly lacking in rationality and imagination, but he can hardly be faulted. It is the purview of lesser men to strive always to match their betters, just as it is their fate to fail.", rating: 4},
+  {author_id: 23, tome_id: 15, title: "", body: "", rating: 5},
+  {author_id: 23, tome_id: 19, title: "", body: "He may have been a reputed mage, but that reputation is ill founded. The only reason this is not rated less, is because Prinn passed on a bit of knowledge, unaware, that allowed me to create a greater version of a spell of my own devising.", rating: 2},
+  {author_id: 12, tome_id: 24, title: "boring", body: "the most borning. book. i've ever. read. Not even hermione liked this one.", rating: 1},
+  {author_id: 12, tome_id: 18, title: "not a monster!", body: "Yeah! I like this book ok, because mostly it doesn't try to eat me!! why does hagrid hate us so", rating: 4},
+  {author_id: 12, tome_id: 20, title: "I just want to see it", body: "I'm just curious! But hermione wont let me read it. she says I might get ideas.", rating: 5},
+  {author_id: 12, tome_id: 16, title: "ow", body: "this book is a lot harder than my schoolbooks. I don't think I like it. It doesn't even teach me any combat spells. Except the evil dark stuff, which is not me!! I'm a warrior of light like dumbledore and my dad!", rating: 2},
+  {author_id: 13, tome_id: 15, title: "That is not dead which can eternal lie, and with strange aeons even death may die.", body: "Nor is it to be thought...that man is either the oldest or the last of earth’s masters, or that the common bulk of life and substances walks alone. The Old Ones were, the Old Ones are, and the Old Ones shall be. Not in the spaces we know, but between them, They walk serene and primal, undimensioned and to us unseen. Yog-Sothoth knows the gate. Yog-Sothoth is the gate. Yog-Sothoth is the key and guardian of the gate. Past, present, future, all are one in Yog-Sothoth. He knows where the Old Ones broke through of old, and where They shall break through again. He knows where They have trod earth’s fields, and where They still tread them, and why no one can behold Them as They tread. By Their smell can men somtimes know them near, but of Their semblance can no man know, saving only in the features of those They have begotten on mankind; and of those are there many sorts, differing in likeness from man’s truest eidolon to that shape without sight or substance which is Them. They walk unseen and foul in lonely places where the Words have been spoken and the Rites howled through at their Seasons. The wind gibbers with Their voices, and the earth mutters with Their consciousness. They bend the forest and crush the city, yet may not forest or city behold the hand that smites. Kadath in the cold waste hath known Them, and what man knows Kadath? The ice desert of the South and the sunken isles of Ocean hold stones where Their seal is engraven, but who hath seen the deep frozen city or the sealed tower long garlanded with seaweed and barnacles? Great Cthulhu is Their cousin, yet can he spy Them only dimly. Iä! Shub-Niggurath! As a foulness shall ye know Them. Their hand is at your throats, yet ye see Them not; and Their habitation is even one with your guarded threshold. Yog-Sothoth is the key to the gate, whereby the spheres meet. Man rules now where They ruled once; They shall soon rule where man rules now. After summer is winter, and after winter summer. They wait patient and potent, for here shall They reign again.", rating: 5},
+  {author_id: 13, tome_id: 19, title: "", body: "Something...that told you how you could compound aconite and belladonna and draw circles of phosphorescent fire on the floor when the stars were right. Something that spoke of melting tallow candles and blending them with corpse-fat, whispered of the uses to which animal sacrifices might be put. It spoke of meetings that could be arranged with various parties most people don't...even believe in... cold deliberate directions for traffic with ancient evil....", rating: 4},
+  {author_id: 13, tome_id: 24, title: "", body: "", rating: 1},
+  {author_id: 13, tome_id: 27, title: "", body: "Madness rides the star-wind... claws and teeth sharpened on centuries of corpses... dripping death astride a bacchanale of bats from nigh-black ruins of buried temples of Belial...", rating: 4},
+  {author_id: 13, tome_id: 20, title: "", body: "Yog-Sothoth knows the gate. Yog-Sothoth is the gate. Yog-Sothoth is the key and guardian of the gate. Past, present, future, all are one in Yog-Sothoth. He knows where the Old Ones broke through of old, and where They shall break through again. He knows where They have trod earth's fields, and where They still tread them, and why no one can behold Them as They tread.", rating: 3},
+  {author_id: 15, tome_id: 26, title: "", body: "My powers! Foul and noisome whelp! You've not seen the last of my wintery fangs! I'll cleave the warmth from your bones and stop still your beating heart with my claaaaws...", rating: 5},
+  {author_id: 15, tome_id: 17, title: "Wizard's Only, Fools!", body: "Fool! Your powers are no match for my magical crown!", rating: 1},
+  {author_id: 15, tome_id: 24, title: "", body: "Wow. This is really bad.", rating: 1},
+  {author_id: 14, tome_id: 24, title: "", body: "Never in my long life have I read a book so utterly devoid of meaning and so bereft of thought. I entreat you, young listener, do not tarry here.", rating: 1},
+  {author_id: 14, tome_id: 16, title: "", body: "On first inspection, an interesting and novel take on the intricacies of the magical arts.", rating: 3},
+  {author_id: 14, tome_id: 25, title: "Incomplete", body: "It is the nature of such tomes as these--tomes that seek to outline the very breadth of the Magical Arts over countless centuries--that they are bound to fall short. The wider the scope, the shallower the depth. Jonathan Strange has done a noteworthy job in outlining the practice of magic in Arthur's Britain. He cannot get around the fact that the history of magic long and complex, and to seek to describe it in so short a volume is to gloss over the complexities inherit therein.", rating: 4},
+  {author_id: 14, tome_id: 22, title: "Not strictly magical", body: "Though prophecies are often the domain of sorcerers, enchanters, and other magical practitioners, the prophecies of the Pergamum Codex come from a divine origin, passed from demonic entities long since dead to the ears and eyes of mortals. Therefor, I cannot justify its appearance on this website. The Arcane has not touched it, though those of the Arcane may still learn much.", rating: 3},
+  {author_id: 14, tome_id: 26, title: "", body: "What a silly book.", rating: 1},
+  {author_id: 16, tome_id: 18, title: "", body: "Ha ha! What an amazing book! I must tell Gandalf!", rating: 5},
+  {author_id: 16, tome_id: 20, title: "", body: "Darkest witchcraft. This foulness spreads to all the forests of the world, from Dol Guldur it comes, a dark and terrible magic...", rating: 1},
+  {author_id: 20, tome_id: 24, title: "", body: "Such arrogance diminishes the light of Men and Elves. The darkness of Sauron grows, twisted and corrupt, spreading its doom to all the corners of Middle-earth. But Sauron can be defeated, as he was in Ages past. Wilbert Slinkhard is the true Evil here.", rating: 1},
+  {author_id: 20, tome_id: 18, title: "", body: "", rating: 3},
+  {author_id: 20, tome_id: 22, title: "", body: "", rating: 4},
+  {author_id: 20, tome_id: 15, title: "", body: "Do not judge too harshly. Even the very wisest cannot see all ends. But as I have been considered wise, my council sought by Men and Elf and Hobbit, I cannot recommend this tome. There is a darkness here, that does not rest.", rating: 2},
+  {author_id: 21, tome_id: 24, title: "", body: "", rating: 1},
+  {author_id: 21, tome_id: 15, title: "", body: "Such filth! Such putrid, stinking filth. Dog's droppings, all of them, and the power of the Great Old Ones can rid the world of them. Kill the disgusting children!", rating: 4},
+  {author_id: 21, tome_id: 27, title: "", body: "I seek power, not portals. Unless I can take this book, and throw every child in the world into it! Soon the air will smell clean.", rating: 2},
+  {author_id: 21, tome_id: 16, title: "", body: "Excellent torture! Excellent poison! With this, the world will soon be cleansed!", rating: 3},
+  {author_id: 19, tome_id: 24, title: "", body: "Ah, yes. Wilbert Slinkhard. I remember him from his days at Hogwarts. A bright lad, but not disposed to hard work. I recall him brought before me on no less than seven occasions for plagiarizing his essays. There are a number of excellent books of Defensive Magic, all available at the school library. I'm sure Madam Pince will be happy to help you find them.", rating: 1},
+  {author_id: 19, tome_id: 18, title: "An admirable collection", body: "Newt Scamander is a fine fellow, if a bit eccentric, and his work in magizoology is among the best the in the world. Magical Britain is lucky to have him.", rating: 5},
+  {author_id: 19, tome_id: 20, title: "", body: "Though a valuable collection of spells otherwise forgotten, I must offer a word of caution to any who seek to gain power through it. The way of the Dark Arts is tempting. I myself played around with them, in my youth, in the guise of the \"Greater Good\". Learn from an old man's mistakes. The best good you can do is to your friends, and for standing up for what is right. It is courage, and love. There is no peace here, only regret.", rating: 1},
+  {author_id: 17, tome_id: 16, title: "", body: "Now I just think it's our own lives that are hidden from us. The mystery – who is that person in the mirror – that's shocking and unfathomable enough for me.", rating: 5},
+  {author_id: 17, tome_id: 24, title: "", body: "", rating: 1},
+  {author_id: 18, tome_id: 20, title: "", body: "Hehehe. I already have immortality, through darker means. A baby each moon, sacrificed to my thirst.", rating: 4},
+  {author_id: 18, tome_id: 24, title: "", body: "This isn't magic, even by my own ancient standards.", rating: 1},
+  {author_id: 18, tome_id: 17, title: "", body: "The Hero's courage comes through the pages like sweet stew. I taste it.", rating: 5},
+  {author_id: 18, tome_id: 15, title: "", body: "Teach me the way of madness, of chaos and corruption. I will show you the delicacies of blood and bowel, show you to fashion life out of death.", rating: 4}
+])
+Shelf.create!([
+  {id: 34, user_id: 12, title: "Mastered"},
+  {id: 35, user_id: 12, title: "Currently Studying"},
+  {id: 36, user_id: 12, title: "Wish to Study"},
+  {id: 37, user_id: 13, title: "Mastered"},
+  {id: 38, user_id: 13, title: "Currently Studying"},
+  {id: 39, user_id: 13, title: "Wish to Study"},
+  {id: 40, user_id: 14, title: "Mastered"},
+  {id: 41, user_id: 14, title: "Currently Studying"},
+  {id: 42, user_id: 14, title: "Wish to Study"},
+  {id: 43, user_id: 15, title: "Mastered"},
+  {id: 44, user_id: 15, title: "Currently Studying"},
+  {id: 45, user_id: 15, title: "Wish to Study"},
+  {id: 46, user_id: 16, title: "Mastered"},
+  {id: 47, user_id: 16, title: "Currently Studying"},
+  {id: 48, user_id: 16, title: "Wish to Study"},
+  {id: 49, user_id: 17, title: "Mastered"},
+  {id: 50, user_id: 17, title: "Currently Studying"},
+  {id: 51, user_id: 17, title: "Wish to Study"},
+  {id: 52, user_id: 18, title: "Mastered"},
+  {id: 53, user_id: 18, title: "Currently Studying"},
+  {id: 54, user_id: 18, title: "Wish to Study"},
+  {id: 55, user_id: 19, title: "Mastered"},
+  {id: 56, user_id: 19, title: "Currently Studying"},
+  {id: 57, user_id: 19, title: "Wish to Study"},
+  {id: 58, user_id: 20, title: "Mastered"},
+  {id: 59, user_id: 20, title: "Currently Studying"},
+  {id: 60, user_id: 20, title: "Wish to Study"},
+  {id: 61, user_id: 21, title: "Mastered"},
+  {id: 62, user_id: 21, title: "Currently Studying"},
+  {id: 63, user_id: 21, title: "Wish to Study"},
+  {id: 67, user_id: 23, title: "Mastered"},
+  {id: 68, user_id: 23, title: "Currently Studying"},
+  {id: 69, user_id: 23, title: "Wish to Study"},
+  {id: 70, user_id: 24, title: "Mastered"},
+  {id: 71, user_id: 24, title: "Currently Studying"},
+  {id: 72, user_id: 24, title: "Wish to Study"}
+])
+Shelving.create!([
+  {shelf_id: 70, tome_id: 22},
+  {shelf_id: 70, tome_id: 27},
+  {shelf_id: 72, tome_id: 16},
+  {shelf_id: 72, tome_id: 17},
+  {shelf_id: 71, tome_id: 25},
+  {shelf_id: 67, tome_id: 24},
+  {shelf_id: 67, tome_id: 20},
+  {shelf_id: 67, tome_id: 15},
+  {shelf_id: 68, tome_id: 25},
+  {shelf_id: 67, tome_id: 19},
+  {shelf_id: 34, tome_id: 24},
+  {shelf_id: 34, tome_id: 18},
+  {shelf_id: 36, tome_id: 20},
+  {shelf_id: 35, tome_id: 16},
+  {shelf_id: 37, tome_id: 15},
+  {shelf_id: 37, tome_id: 19},
+  {shelf_id: 37, tome_id: 27},
+  {shelf_id: 38, tome_id: 20},
+  {shelf_id: 45, tome_id: 17},
+  {shelf_id: 43, tome_id: 26},
+  {shelf_id: 40, tome_id: 24},
+  {shelf_id: 40, tome_id: 25},
+  {shelf_id: 41, tome_id: 16},
+  {shelf_id: 40, tome_id: 26},
+  {shelf_id: 41, tome_id: 22},
+  {shelf_id: 47, tome_id: 18},
+  {shelf_id: 58, tome_id: 24},
+  {shelf_id: 59, tome_id: 18},
+  {shelf_id: 61, tome_id: 15},
+  {shelf_id: 62, tome_id: 16},
+  {shelf_id: 61, tome_id: 27},
+  {shelf_id: 55, tome_id: 24},
+  {shelf_id: 55, tome_id: 18},
+  {shelf_id: 55, tome_id: 20},
+  {shelf_id: 49, tome_id: 16},
+  {shelf_id: 50, tome_id: 24},
+  {shelf_id: 53, tome_id: 20},
+  {shelf_id: 52, tome_id: 15}
+])
+
+Review.all.each do |review|
+  review.update(created_at: Faker::Date.backward(10))
 end
