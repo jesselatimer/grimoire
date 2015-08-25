@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+h1.index-header {
+  margin-left: 30px;
+}
+
 body {
   background:
     url('/assets/alejandroescamilla-book.png') no-repeat bottom center fixed,
@@ -55,4 +59,8 @@ body {
 
 .alert {
   text-align: center;
+}
+
+.thumbnail {
+  max-width: 75px;
 }

@@ -34,6 +34,7 @@ class Api::TomesController < ApplicationController
       :description,
       :canon,
       :author_id,
+      :author_name,
       :cover_url,
       :image600,
       :image300,

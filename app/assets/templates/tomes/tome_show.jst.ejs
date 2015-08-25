@@ -24,7 +24,7 @@
   <h1 class="title"><%= tome.escape("title") %></h1>
   <p class="author">
     <% if (!tome.author().isEmpty()) { %>
-      By <a href="#/users/<%= tome.author().id %>"><%= tome.author().escape("username") %></a> (grimoire author)
+      By <a href="#/users/<%= tome.author().id %>"><%= tome.author().escape("name") %></a> (grimoire author)
     <% } else { %>
       By <%= tome.escape("author_name") || "an unknown author" %>
     <% } %>

@@ -11,6 +11,7 @@ GoodTomes.Views.HeaderShow = Backbone.View.extend ({
   render: function () {
     var renderedContent = this.template({ auth_token: this.auth_token });
     this.$el.html(renderedContent);
+    this.$('[data-toggle="tooltip"]').tooltip();
     return this;
   },
 
