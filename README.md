@@ -32,5 +32,6 @@ Grimoire is like goodreads for magical practitioners. Built on Rails and Backbon
 - [ ] Activity history (e.g. reviews, adding grimoires to categories, commenting)
 - [ ] Multiple sessions/session management
 - [ ] Markdown in user inputted fields (Markdown-js/Bootstrap Markdown)
+
 ### Bug Fixes
 - [ ] User/Grimoire 'x' button doesn't work when already logged on.
