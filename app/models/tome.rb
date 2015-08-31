@@ -28,10 +28,10 @@ class Tome < ActiveRecord::Base
 
   def ensure_cover_url
     if self.cover_url == "" || nil
-      self.cover_url = "http://orig06.deviantart.net/9ceb/f/2011/050/0/5/grimoire_cover_by_hinatauzo9-d39xker.png"
-      self.image600 = "http://orig06.deviantart.net/9ceb/f/2011/050/0/5/grimoire_cover_by_hinatauzo9-d39xker.png"
-      self.image300 = "http://orig06.deviantart.net/9ceb/f/2011/050/0/5/grimoire_cover_by_hinatauzo9-d39xker.png"
-      self.image75 = "http://orig06.deviantart.net/9ceb/f/2011/050/0/5/grimoire_cover_by_hinatauzo9-d39xker.png"
+      self.cover_url = "http://res.cloudinary.com/dybv49bau/image/upload/v1441047491/grimoire_cover_by_hinatauzo9-d39xker_agfuas.png"
+      self.image600 = "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_600/v1441047491/grimoire_cover_by_hinatauzo9-d39xker_agfuas.png"
+      self.image300 = "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1441047491/grimoire_cover_by_hinatauzo9-d39xker_agfuas.png"
+      self.image75 = "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_75/v1441047491/grimoire_cover_by_hinatauzo9-d39xker_agfuas.png"
     end
   end
 

@@ -16,27 +16,29 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#/tomes">Grimoires</a></li>
+        <li class="multi-link">
+          <a href="#/tomes">Grimoires</a>
+          <a href="#/tomes/new" alt="Add Grimoire" title="Add Grimoire">
+            <i class="fa fa-plus"></i>
+          </a>
+        </li>
         <li><a href="#/users">Practitioners</a></li>
-        <li><a href="#/tomes/new">Add Grimoire</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Feed</a></li>
-        <li><a href="#/users/<%= CURRENT_USER.id %>"><%= CURRENT_USER.escape("username") %></a></li>
+        <li class="current-user-link">
+          <a href="#/users/<%= CURRENT_USER.id %>">
+            <i class="fa fa-eye"></i>
+            <%= CURRENT_USER.escape("username") %>
+          </a>
+        </li>
         <li>
           <form class="" action="/session" method="post">
             <input type="hidden" name="authenticity_token" value="<%= auth_token %>">
             <input type="hidden" name="_method" value="delete">
-            <!-- <button type="button" class="btn">
+            <button type="submit" alt="Submit" class="sign-out" alt="Sign Out" title="Sign Out">
               <i class="fa fa-sign-out"></i>
-            </button> -->
-            <input src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Power_-_Logoff.png"
-            type="image"
-            alt="Submit"
-            class="sign-out"
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Sign Out">
+            </button>
           </form>
         </li>
       </ul>

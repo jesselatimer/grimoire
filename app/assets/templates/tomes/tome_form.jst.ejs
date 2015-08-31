@@ -3,13 +3,13 @@
 <form class="tome-form clear-fix">
 
   <div class="cover-image">
-    <img src="<%= tome.escape("image300") %>" />
+    <img src="<%= tome.escape("image300") || "http://res.cloudinary.com/dybv49bau/image/upload/c_scale,w_300/v1441047491/grimoire_cover_by_hinatauzo9-d39xker_agfuas.png" %>" />
     <br>
     <input type="hidden" name="tome[cover_url]" value="<%= tome.escape("cover_url") %>">
     <input type="hidden" name="tome[image600]" value="<%= tome.escape("image600") %>">
     <input type="hidden" name="tome[image300]" value="<%= tome.escape("image300") %>">
     <input type="hidden" name="tome[image75]" value="<%= tome.escape("image75") %>">
-    <button type="button" class="btn btn-default upload-image">Set Cover Image</button>
+    <button type="button" class="btn btn-default upload-image"><i class="fa fa-cloud-upload"></i> Set Cover Image</button>
   </div>
 
   <div class="form-group">
