@@ -28,6 +28,7 @@ Grimoire is like goodreads for magical practitioners. Built on Rails and Backbon
 ### Features
 - [ ] Search for grimoires/users
 - [ ] Typeahead search bar
+- [ ] List view for grimoires
 - [ ] Follow users with the option to see only followed users in feed
 - [ ] Activity history (e.g. reviews, adding grimoires to categories, commenting)
 - [ ] Multiple sessions/session management

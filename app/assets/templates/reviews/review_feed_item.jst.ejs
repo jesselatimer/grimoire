@@ -1,19 +1,19 @@
 <div class="review-sidebar">
-  <a href="#/users/<%= review.author().id %>">
-    <img
-      src="<%= review.author().escape("image75") %>"
-      class="thumbnail"
-      data-toggle="tooltip"
-      data-placement="top"
-      title="<%= review.author().escape("username") %>" />
-  </a>
-  <a href="#/tomes/<%= review.tome().id %>" class="sub-image">
+  <a href="#/tomes/<%= review.tome().id %>">
     <img
       src="<%= review.tome().escape("image75") %>"
       class="thumbnail"
       data-toggle="tooltip"
       data-placement="bottom"
       title="<%= review.tome().escape("title") %>" />
+  </a>
+  <a href="#/users/<%= review.author().id %>" class="sub-image">
+    <img
+      src="<%= review.author().escape("image75") %>"
+      class="thumbnail"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="<%= review.author().escape("username") %>" />
   </a>
 </div>
 
