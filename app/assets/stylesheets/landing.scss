@@ -20,7 +20,10 @@
     display: block;
     margin: 50px auto 0;
     clear: both;
+    transition: opacity ease .2s;
   }
+
+  .guest:hover { opacity: 0.8; }
 
   img {
     width: 100%;
@@ -29,6 +32,7 @@
 
   .user-form-wrapper {
     padding: 20px;
+    padding-top: 30px;
     border: 2px #E3DFC9 solid;
     background-color: #F0F0E4;
     .user-form input { margin-bottom: 15px; }
