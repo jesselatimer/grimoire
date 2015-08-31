@@ -23,6 +23,7 @@ GoodTomes.Views.ReviewShow = Backbone.CompositeView.extend ({
       initialRating: this.model.get("rating"),
       readonly: true
     });
+    setTimeout(function () { this.$el.css("opacity", 1); }.bind(this), 50);
     return this;
   },
 

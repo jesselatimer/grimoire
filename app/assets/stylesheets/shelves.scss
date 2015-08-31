@@ -3,6 +3,8 @@
   .shelf {
     margin-bottom: 20px;
     min-width: 240px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
 
     .shelf-item {
       // border: 2px #E3DFC9 solid;

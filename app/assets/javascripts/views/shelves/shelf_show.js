@@ -13,6 +13,7 @@ GoodTomes.Views.ShelfShow = Backbone.CompositeView.extend ({
     var renderedContent = this.template({ shelf: this.model });
     this.$el.html(renderedContent);
     this.attachSubviews();
+    setTimeout(function () { this.$el.css("opacity", 1); }.bind(this), 50);
     return this;
   },
 
