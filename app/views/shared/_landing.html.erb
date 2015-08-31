@@ -46,6 +46,12 @@
   var sessionButton = $('.sign-in');
   var guestButton = $('.guest');
 
+  var inputLength = 0;
+  var userEl = $('#session-form input[name="user[username]"]');
+  var userInput = "Myrddin";
+  var passwordEl = $('#session-form input[name="user[password]"]');
+  var passwordInput = "password";
+
   userButton.click(function () {
     $('.user').css("display", "block");
     $('.session').css("display", "none");
@@ -57,9 +63,29 @@
   });
 
   guestButton.click(function () {
-    $('.sign-in').click();
-    $('#session-form input[name="user[username]"]').val("Myrddin");
-    $('#session-form input[name="user[password]"]').val("password");
-    $('#session-form').submit();
-  });
+    sessionButton.click();
+    typeUsername.call(this);
+  }.bind(this));
+
+  function typeUsername() {
+    userEl.val(userInput.substr(0, inputLength++));
+    if(inputLength < userInput.length+1) {
+      setTimeout('typeUsername()', 50);
+    } else {
+      inputLength = 0;
+      userInput = '';
+      typePassword();
+    }
+  };
+
+  function typePassword() {
+    passwordEl.val(passwordInput.substr(0, inputLength++));
+    if(inputLength < passwordInput.length+1) {
+      setTimeout('typePassword()', 50);
+    } else {
+      inputLength = 0;
+      passwordInput = '';
+      $('#session-form').submit();
+    }
+  };
 </script>

@@ -20,10 +20,11 @@
     display: block;
     margin: 50px auto 0;
     clear: both;
+    opacity: 0.8;
     transition: opacity ease .2s;
   }
 
-  .guest:hover { opacity: 0.8; }
+  .guest:hover { opacity: 1; }
 
   img {
     width: 100%;
