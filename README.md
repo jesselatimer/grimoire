@@ -24,7 +24,7 @@ Grimoire is like goodreads for magical practitioners. Built on Rails and Backbon
 - [x] Add grimoires to shelves
 - [x] Review and rate grimoires
 
-### To Do
+## To Do
 ### Features
 - [ ] Search for grimoires/users
 - [ ] Typeahead search bar
