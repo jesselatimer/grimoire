@@ -41,8 +41,12 @@
       position: relative;
       width: 100%;
       img {
+        min-width: 100%;
         min-height: 100%;
-        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
       }
     }
   }
