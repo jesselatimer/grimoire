@@ -17,9 +17,9 @@ GoodTomes.Views.ReviewForm = Backbone.View.extend ({
     this.$el.html(renderedContent);
     this.$('.form-errors').css("display", "none");
     this.$('#rating').barrating({
-      theme: 'fontawesome-stars',
-      initialRating: this.model.get("rating")
+      theme: 'fontawesome-stars'
     });
+    this.$('#rating').barrating('set', this.model.get("rating"));
     return this;
   },
 
