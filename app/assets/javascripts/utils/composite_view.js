@@ -46,8 +46,10 @@ Backbone.CompositeView = Backbone.View.extend({
     });
   },
 
-  attachSortedSubviews: function () {
+  attachSortedSubviews: function (sortby) {
+    sortby = sortby || 'created_at';
     var models = this.collection.models.slice();
+    this.collection.comparator = sortby;
     this.collection.set([]);
     this.collection.set(models);
     this.attachSubviews();

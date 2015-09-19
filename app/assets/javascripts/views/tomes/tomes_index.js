@@ -11,7 +11,8 @@ GoodTomes.Views.TomesIndex = Backbone.CompositeView.extend ({
   render: function () {
     var renderedContent = this.template({ tomes: this.collection });
     this.$el.html(renderedContent);
-    this.attachSubviews();
+    this.attachSortedSubviews('num_ratings');
+    debugger
     return this;
   },
 
