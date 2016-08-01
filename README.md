@@ -4,7 +4,20 @@
 
 [site]: http://grimoire.site/
 
-Grimoire is like goodreads for magical practitioners. Built on Rails and Backbone.js.
+Grimoire is a haven for magical practitioners to rate and review tomes of magical lore.
+
+Built on Ruby on Rails and Backbone.js by a single developer in just over two weeks. The culminating final project for [App Academy][app-academy]. The full list of technologies:
+* JavaScript (ECMAScript 5)
+* [Backbone.js][backbone] (MVC Frontend Framework)
+* jQuery
+* Ruby on Rails -v 4.2.3
+* [PostgreSQL][postgres]
+* HTML5
+* SCSS/CSS3
+
+[app-academy]: https://www.appacademy.io/
+[backbone]: https://github.com/jashkenas/backbone
+[postgres]: https://github.com/postgres/postgres
 
 ## Features
 ### Users
@@ -26,6 +39,7 @@ Grimoire is like goodreads for magical practitioners. Built on Rails and Backbon
 
 ## To Do
 ### Features
+- [ ] Tabs for Reviews/Lists on user show page
 - [ ] Search for grimoires/users
 - [ ] Typeahead search bar
 - [ ] List view for grimoires
