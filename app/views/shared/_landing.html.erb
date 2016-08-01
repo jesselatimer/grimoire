@@ -5,7 +5,6 @@
 
   <% if !current_user %>
     <div class="session">
-      <%= render partial: "shared/description" %>
       <%= render partial: "shared/form", locals: {
         url: "/session",
         submit_value: "Sign In",
@@ -18,7 +17,6 @@
       </div>
     </div>
     <div class="user">
-      <%= render partial: "shared/description" %>
       <%= render partial: "shared/form", locals: {
         url: "/users",
         submit_value: "Sign Up",
