@@ -46,6 +46,7 @@ Built on Ruby on Rails and Backbone.js by a single developer in just over two we
 - [ ] Follow users with the option to see only followed users in feed
 - [ ] Activity history (e.g. reviews, adding grimoires to categories, commenting)
 - [ ] Multiple sessions/session management
+- [ ] Add transition effects between pages where appropriate.
 - [ ] Markdown in user inputted fields (Markdown-js/Bootstrap Markdown)
 
 ### Bug Fixes
