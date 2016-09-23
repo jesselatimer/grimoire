@@ -1,3 +1,12 @@
+#blocks-all {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: purple;
+  z-index: 999;
+}
+
 .login-wrapper {
   position: absolute;
   left: 50%;
@@ -6,76 +15,118 @@
   width: 40%;
   min-width: 150px;
   max-width: 400px;
+  perspective: 800px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 5s;
+  &.pulled{ opacity: 1; }
 
-  .session, .user {
-    border: 2px #E3DFC9 solid;
-    background-color: #F0F0E4;
-
-    .landing-description {
-      display: block;
-      padding: 20px 20px 0 20px;
-      text-align: center;
-      font-style: italic;
-    }
-  }
-  .session { display: block; }
-  .user { display: none; }
-
-  .guest {
-    width: 70%;
-    min-width: 200px;
-    box-sizing: border-box;
-    border-radius: 0px;
-    border: 2px #E3DFC9 solid;
-    background-color: #F0F0E4;
+  logo, logo img {
     display: block;
-    margin: 50px auto 0;
-    clear: both;
-    opacity: 0.8;
-    transition: opacity ease .2s;
-  }
-
-  .guest:hover { opacity: 1; }
-
-  img {
     width: 100%;
     margin-bottom: -6%;
   }
 
-  .user-form-wrapper {
-    padding: 10px 20px 20px 20px;
-    .user-form input { margin-bottom: 15px; }
-    .user-form :last-child { margin-bottom: 0; }
-  }
+  .login-card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 
-  .log-state {
-    :first-child {
-      float: left;
-      margin-left: -2px;
-    }
-    :last-child {
-      float: right;
-      margin-right: -2px;
+    &.flipped {
+      transform: rotateY(180deg);
     }
 
-    .btn {
-      width: 49%;
-      box-sizing: border-box;
-      border-radius: 0px;
+    face {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
       border: 2px #E3DFC9 solid;
-      border-top: 0;
       background-color: #F0F0E4;
+      backface-visibility: hidden;
+
+      .site-description {
+        display: block;
+        padding: 20px 20px 0 20px;
+        text-align: center;
+        font-style: italic;
+      }
+    }
+    .session {}
+    .user { transform: rotateY(180deg); }
+
+    .user-form-wrapper {
+      padding: 10px 20px 20px 20px;
+      .user-form input { margin-bottom: 15px; }
+      .user-form :last-child { margin-bottom: 0; }
     }
 
-    .inactive {
-      opacity: .8;
-      transition: ease .2s;
-      border-top: 2px #E3DFC9 solid;
-      padding-top: 4px;
-      -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    .log-state {
+      :first-child {
+        float: left;
+        margin-left: -2px;
+      }
+      :last-child {
+        float: right;
+        margin-right: -2px;
+      }
+
+      .btn {
+        width: 49%;
+        box-sizing: border-box;
+        border-radius: 0px;
+        border: 2px #E3DFC9 solid;
+        border-top: 0;
+        background-color: #F0F0E4;
+      }
+
+      .inactive {
+        opacity: .8;
+        transition: ease .2s;
+        border-top: 2px #E3DFC9 solid;
+        padding-top: 4px;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      }
+      .inactive:hover { opacity: 1; }
     }
-    .inactive:hover { opacity: 1; }
+  }
+}
+.guest {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  border-radius: 0px;
+  border: 2px #E3DFC9 solid;
+  background-color: #F0F0E4;
+  display: block;
+  opacity: 0.8;
+  transition: opacity ease .2s;
+
+  &:hover { opacity: 1; }
+}
+
+#background-wrapper {
+  .background-line {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    opacity: 1;
+    background: purple;
+    pointer-events: none;
+    z-index: 11;
+    transition: opacity 5s, z-index 10s;
+
+    &.pushed {
+      z-index: 9;
+      opacity: 0;
+    }
   }
 }
 
