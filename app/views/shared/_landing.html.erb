@@ -50,26 +50,26 @@
 
 <script type="text/javascript">
   window.onload = function () {
-    $("body").css("padding", "0px");
-    var divCount = window.innerHeight;
-    var html = $("#background-wrapper line")[0];
-    for (var i = 1; i < divCount; i++) {
-      $("#background-wrapper").prepend(html.outerHTML);
-    }
-    $("#blocks-all").css("display", "none");
-    function getTime(t) { return t*t*t*t; };
-    $(".login-wrapper").addClass("pulled");
-    var backgroundLines = $(".background-line");
-    function pushLine(backgroundLines, i) {
-      backgroundLines[i].className = ("background-line pushed");
-      if (i >= (backgroundLines.length - 1)) {
-        return;
-      };
-      window.setTimeout(function() {
-        pushLine(backgroundLines, i + 1)
-      }.bind(this), getTime(i/1000));
-    };
-    pushLine(backgroundLines, 0);
+    // $("body").css("padding", "0px");
+    // var divCount = window.innerHeight;
+    // var html = $("#background-wrapper line")[0];
+    // for (var i = 1; i < divCount; i++) {
+    //   $("#background-wrapper").prepend(html.outerHTML);
+    // }
+    // $("#blocks-all").css("display", "none");
+    // function getTime(t) { return t*t*t*t; };
+    // $(".login-wrapper").addClass("pulled");
+    // var backgroundLines = $(".background-line");
+    // function pushLine(backgroundLines, i) {
+    //   backgroundLines[i].className = ("background-line pushed");
+    //   if (i >= (backgroundLines.length - 1)) {
+    //     return;
+    //   };
+    //   window.setTimeout(function() {
+    //     pushLine(backgroundLines, i + 1)
+    //   }.bind(this), getTime(i/1000));
+    // };
+    // pushLine(backgroundLines, 0);
 
     var userButton = $('.sign-up');
     var sessionButton = $('.sign-in');
