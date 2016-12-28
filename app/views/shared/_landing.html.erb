@@ -1,37 +1,36 @@
-<blocker id="blocks-all"></blocker>
-<div class="login-wrapper clear-fix">
-  <logo href="/">
+<div class="login-wrapper">
+  <a href="/">
     <img src="/assets/grimoire-logo.png" class="logo" />
-  </logo>
+  </a>
+
   <% if !current_user %>
-    <card class="login-card clear-fix">
-      <face class="session clear-fix">
-        <%= render partial: "shared/description" %>
-        <%= render partial: "shared/form", locals: {
-          url: "/session",
-          submit_value: "Sign In",
-          button_class: "btn-primary",
-          id: "session-form"
-        } %>
-        <div class="log-state">
-          <%= link_to "Sign In", "#", class: "btn selected sign-in" %>
-          <%= link_to "Sign Up", "#", class: "btn inactive sign-up" %>
-        </div>
-      </face>
-      <face class="user clear-fix">
-        <%= render partial: "shared/description" %>
-        <%= render partial: "shared/form", locals: {
-          url: "/users",
-          submit_value: "Sign Up",
-          button_class: "btn-success",
-          id: "user-form"
-        } %>
-        <div class="log-state">
-          <%= link_to "Sign In", "#", class: "btn inactive sign-in" %>
-          <%= link_to "Sign Up", "#", class: "btn selected sign-up" %>
-        </div>
-      </face>
-    </card>
+    <div class="session">
+      <%= render partial: "shared/description" %>
+      <%= render partial: "shared/form", locals: {
+        url: "/session",
+        submit_value: "Sign In",
+        button_class: "btn-primary",
+        id: "session-form"
+      } %>
+      <div class="log-state">
+        <%= link_to "Sign In", "#", class: "btn selected sign-in" %>
+        <%= link_to "Sign Up", "#", class: "btn inactive sign-up" %>
+      </div>
+    </div>
+    <div class="user">
+      <%= render partial: "shared/description" %>
+      <%= render partial: "shared/form", locals: {
+        url: "/users",
+        submit_value: "Sign Up",
+        button_class: "btn-success",
+        id: "user-form"
+      } %>
+      <div class="log-state">
+        <%= link_to "Sign In", "#", class: "btn inactive sign-in" %>
+        <%= link_to "Sign Up", "#", class: "btn selected sign-up" %>
+      </div>
+    </div>
+    <%= link_to 'Speak "Guest" and Enter', '#', class: "btn guest" %>
   <% else %>
     <div class="user-form-wrapper">
       <p>
@@ -43,77 +42,52 @@
     </div>
   <% end %>
 </div>
-<%= link_to 'Speak "Guest" and Enter', '#', class: "btn guest" %>
-<div id="background-wrapper">
-  <line class="background-line"></line>
-</div>
 
 <script type="text/javascript">
-  window.onload = function () {
-    $("body").css("padding", "0px");
-    var divCount = window.innerHeight;
-    var html = $("#background-wrapper line")[0];
-    for (var i = 1; i < divCount; i++) {
-      $("#background-wrapper").prepend(html.outerHTML);
+  var userButton = $('.sign-up');
+  var sessionButton = $('.sign-in');
+  var guestButton = $('.guest');
+
+  var inputLength = 0;
+  var userEl = $('#session-form input[name="user[username]"]');
+  var userInput = "Myrddin";
+  var passwordEl = $('#session-form input[name="user[password]"]');
+  var passwordInput = "password";
+
+  userButton.click(function () {
+    $('.user').css("display", "block");
+    $('.session').css("display", "none");
+  });
+
+  sessionButton.click(function () {
+    $('.session').css("display", "block");
+    $('.user').css("display", "none");
+  });
+
+  guestButton.click(function () {
+    sessionButton.click();
+    typeUsername.call(this);
+  }.bind(this));
+
+  function typeUsername() {
+    userEl.val(userInput.substr(0, inputLength++));
+    if(inputLength < userInput.length+1) {
+      setTimeout('typeUsername()', 50);
+    } else {
+      inputLength = 0;
+      userInput = '';
+      typePassword();
     }
-    $("#blocks-all").css("display", "none");
-    function getTime(t) { return t*t*t*t; };
-    $(".login-wrapper").addClass("pulled");
-    var backgroundLines = $(".background-line");
-    function pushLine(backgroundLines, i) {
-      backgroundLines[i].className = ("background-line pushed");
-      if (i >= (backgroundLines.length - 1)) {
-        return;
-      };
-      window.setTimeout(function() {
-        pushLine(backgroundLines, i + 1)
-      }.bind(this), getTime(i/1000));
-    };
-    pushLine(backgroundLines, 0);
+  };
 
-    var userButton = $('.sign-up');
-    var sessionButton = $('.sign-in');
-    var guestButton = $('.guest');
-
-    var inputLength = 0;
-    var userEl = $('#session-form input[name="user[username]"]');
-    var userInput = "Myrddin";
-    var passwordEl = $('#session-form input[name="user[password]"]');
-    var passwordInput = "password";
-
-    userButton.click(function () {
-      $('.login-card').addClass("flipped");
-    });
-
-    sessionButton.click(function () {
-      $('.login-card').removeClass("flipped");
-    });
-
-    guestButton.click(function () {
-      sessionButton.click();
-      typeUsername.call(this);
-    }.bind(this));
-
-    function typeUsername() {
-      userEl.val(userInput.substr(0, inputLength++));
-      if(inputLength < userInput.length+1) {
-        setTimeout('typeUsername()', 50);
-      } else {
-        inputLength = 0;
-        userInput = '';
-        typePassword();
-      }
-    };
-
-    function typePassword() {
-      passwordEl.val(passwordInput.substr(0, inputLength++));
-      if(inputLength < passwordInput.length+1) {
-        setTimeout('typePassword()', 50);
-      } else {
-        inputLength = 0;
-        passwordInput = '';
-        $('#session-form').submit();
-      }
-    };
+  function typePassword() {
+    passwordEl.val(passwordInput.substr(0, inputLength++));
+    if(inputLength < passwordInput.length+1) {
+      setTimeout('typePassword()', 50);
+    } else {
+      inputLength = 0;
+      passwordInput = '';
+      $('#session-form').submit();
+    }
   };
 </script>
