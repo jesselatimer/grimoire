@@ -4,7 +4,7 @@
 
 [site]: http://grimoire.site/
 
-Grimoire is a haven for magical practitioners to rate and review tomes of magical lore.
+**Grimoire** is a personal full stack project for fantasy characters to rate and review tomes of magic, inspired by Goodreads.
 
 Built on Ruby on Rails and Backbone.js by a single developer in just over two weeks. The culminating final project for [App Academy][app-academy]. The full list of technologies:
 * JavaScript (ECMAScript 5)
